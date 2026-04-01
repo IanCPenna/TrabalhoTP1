@@ -32,6 +32,34 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="dominios/codigos/codigo.cpp" />
+		<Unit filename="dominios/codigos/data.cpp" />
+		<Unit filename="dominios/codigos/email.cpp" />
+		<Unit filename="dominios/codigos/estado.cpp" />
+		<Unit filename="dominios/codigos/nome.cpp" />
+		<Unit filename="dominios/codigos/papel.cpp" />
+		<Unit filename="dominios/codigos/prioridade.cpp" />
+		<Unit filename="dominios/codigos/senha.cpp" />
+		<Unit filename="dominios/codigos/tempo.cpp" />
+		<Unit filename="dominios/codigos/texto.cpp" />
+		<Unit filename="dominios/headers/codigo.hpp" />
+		<Unit filename="dominios/headers/data.hpp" />
+		<Unit filename="dominios/headers/email.hpp" />
+		<Unit filename="dominios/headers/estado.hpp" />
+		<Unit filename="dominios/headers/nome.hpp" />
+		<Unit filename="dominios/headers/papel.hpp" />
+		<Unit filename="dominios/headers/prioridade.hpp" />
+		<Unit filename="dominios/headers/senha.hpp" />
+		<Unit filename="dominios/headers/tempo.hpp" />
+		<Unit filename="dominios/headers/texto.hpp" />
+		<Unit filename="entidades/codigos/Pessoa.cpp" />
+		<Unit filename="entidades/codigos/Plano_Sprint.cpp" />
+		<Unit filename="entidades/codigos/Projeto.cpp" />
+		<Unit filename="entidades/codigos/historia_usuario.cpp" />
+		<Unit filename="entidades/headers/Pessoa.hpp" />
+		<Unit filename="entidades/headers/Plano_Sprint.hpp" />
+		<Unit filename="entidades/headers/Projeto.hpp" />
+		<Unit filename="entidades/headers/historia_usuario.hpp" />
 		<Unit filename="main.cpp" />
 		<Extensions />
 	</Project>
