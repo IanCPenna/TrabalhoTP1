@@ -4,9 +4,9 @@
 #include <cstdint>
 #include "template_dominios.hpp"
 
-class Tempo:public Dominio<uint8_t> {
+class Tempo:public Dominio<int> {
     private:
-        bool validar(uint8_t);
+        bool validar(int);
 };
 
 
