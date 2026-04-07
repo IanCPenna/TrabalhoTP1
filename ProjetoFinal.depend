@@ -1,0 +1,40 @@
+# depslib dependency file v1.0
+1775588877 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\entidades\codigos\historia_usuario.cpp
+
+1775588877 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\entidades\codigos\pessoa.cpp
+
+1775588877 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\entidades\codigos\plano_sprint.cpp
+
+1775588877 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\entidades\codigos\projeto.cpp
+
+1775591298 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\codigos\codigo.cpp
+
+1775591292 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\codigos\data.cpp
+
+1775591284 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\codigos\email.cpp
+
+1775591277 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\codigos\estado.cpp
+
+1775591271 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\codigos\nome.cpp
+
+1775591255 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\codigos\papel.cpp
+
+1775591258 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\codigos\prioridade.cpp
+
+1775591260 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\codigos\senha.cpp
+
+1775591264 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\codigos\texto.cpp
+
+1775592067 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\main.cpp
+	<iostream>
+	"dominios/headers/tempo.hpp"
+
+1775591900 c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\headers\tempo.hpp
+	<cstdint>
+	"template_dominios.hpp"
+
+1775590757 c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\headers\template_dominios.hpp
+
+1775592067 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\codigos\tempo.cpp
+	"../headers/tempo.hpp"
+
