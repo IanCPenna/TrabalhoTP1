@@ -50,6 +50,7 @@
 		<Unit filename="dominios/headers/papel.hpp" />
 		<Unit filename="dominios/headers/prioridade.hpp" />
 		<Unit filename="dominios/headers/senha.hpp" />
+		<Unit filename="dominios/headers/template_dominios.hpp" />
 		<Unit filename="dominios/headers/tempo.hpp" />
 		<Unit filename="dominios/headers/texto.hpp" />
 		<Unit filename="entidades/codigos/Pessoa.cpp" />
