@@ -25,15 +25,16 @@
 
 1775591264 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\codigos\texto.cpp
 
-1775592124 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\main.cpp
+1777296429 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\main.cpp
 	<iostream>
+	"dominios/headers/tempo.hpp"
 
-1775592649 c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\headers\tempo.hpp
-	<cstdint>
+1777318993 c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\headers\tempo.hpp
 	"template_dominios.hpp"
 
-1775590757 c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\headers\template_dominios.hpp
+1777318613 c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\headers\template_dominios.hpp
+	<stdexcept>
 
-1775592067 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\codigos\tempo.cpp
+1777318604 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\codigos\tempo.cpp
 	"../headers/tempo.hpp"
 

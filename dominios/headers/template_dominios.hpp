@@ -1,19 +1,20 @@
 #ifndef TEMPLATE_DOMINIOS_HPP_INCLUDED
 #define TEMPLATE_DOMINIOS_HPP_INCLUDED
 
+
+#include <stdexcept>
+
+using namespace std;
 template <typename T>
 class Dominio {
     private:
         T valor;
-        virtual bool validar(T) = 0;
+        virtual void validar(T) = 0;
 
     public:
-        bool setValor(T novoValor) {
-            if (validar(novoValor)) {
-                valor = novoValor;
-                return true;
-            }
-            return false;
+        void setValor(T novoValor) {
+            validar(novoValor);
+            valor = novoValor;
         }
 
         T getValor() const {
