@@ -1,5 +1,5 @@
 #include <iostream>
-#include "dominios/headers/tempo.hpp"
+#include "dominios/headers/papel.hpp"
 
 
 
@@ -8,7 +8,7 @@ using namespace std;
 
 int main()
 {
-    Tempo dominio;
+    Papel dominio;
     int valor;
     cin >> valor;
     try{
