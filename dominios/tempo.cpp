@@ -1,4 +1,4 @@
-#include "../headers/tempo.hpp"
+#include "tempo.hpp"
 
 
 void Tempo::validar(int valor){
