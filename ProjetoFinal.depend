@@ -26,9 +26,9 @@
 
 1775591264 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\codigos\texto.cpp
 
-1777386358 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\main.cpp
+1777493437 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\main.cpp
 	<iostream>
-	"dominios/papel.hpp"
+	"dominios/texto.hpp"
 
 1777318993 c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\headers\tempo.hpp
 	"template_dominios.hpp"
@@ -50,13 +50,17 @@
 
 1775591277 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\estado.cpp
 
-1775591271 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\nome.cpp
+1777491523 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\nome.cpp
+	"nome.hpp"
+	<cctype>
 
 1775591258 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\prioridade.cpp
 
 1775591260 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\senha.cpp
 
-1775591264 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\texto.cpp
+1777493465 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\texto.cpp
+	"texto.hpp"
+	<cctype>
 
 1775588877 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\entidades\historia_usuario.cpp
 
@@ -74,4 +78,20 @@
 
 1777386381 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\papel.cpp
 	"papel.hpp"
+
+1777386391 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\tempo.cpp
+	"tempo.hpp"
+
+1777318993 c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\tempo.hpp
+	"template_dominios.hpp"
+
+1777491513 c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\nome.hpp
+	"template_dominios.hpp"
+
+1777387017 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\testesunitarios\tutemplate.cpp
+
+1777386936 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\testesunitarios\tutempo.cpp
+
+1777491602 c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\texto.hpp
+	"template_dominios.hpp"
 
