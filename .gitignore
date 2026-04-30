@@ -2,4 +2,6 @@
 bin/
 obj/
 
+# Ignorar arquivos
 tempCodeRunnerFile.cpp
+ProjetoFinal.layout
