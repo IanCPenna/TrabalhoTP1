@@ -95,3 +95,65 @@
 1777491602 c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\texto.hpp
 	"template_dominios.hpp"
 
+1778196038 source:c:\users\arthur\documents\arthur\unb_mecatrônica\semestre_11\tp1\trabalho\trabalhotp1\dominios\codigo.cpp
+
+1778196038 source:c:\users\arthur\documents\arthur\unb_mecatrônica\semestre_11\tp1\trabalho\trabalhotp1\dominios\data.cpp
+
+1778196038 source:c:\users\arthur\documents\arthur\unb_mecatrônica\semestre_11\tp1\trabalho\trabalhotp1\dominios\email.cpp
+
+1778196038 source:c:\users\arthur\documents\arthur\unb_mecatrônica\semestre_11\tp1\trabalho\trabalhotp1\dominios\nome.cpp
+	"nome.hpp"
+	<cctype>
+
+1778196038 c:\users\arthur\documents\arthur\unb_mecatrônica\semestre_11\tp1\trabalho\trabalhotp1\dominios\nome.hpp
+	"template_dominios.hpp"
+
+1778196038 c:\users\arthur\documents\arthur\unb_mecatrônica\semestre_11\tp1\trabalho\trabalhotp1\dominios\template_dominios.hpp
+	<stdexcept>
+
+1778196038 source:c:\users\arthur\documents\arthur\unb_mecatrônica\semestre_11\tp1\trabalho\trabalhotp1\dominios\papel.cpp
+	"papel.hpp"
+
+1778196038 c:\users\arthur\documents\arthur\unb_mecatrônica\semestre_11\tp1\trabalho\trabalhotp1\dominios\papel.hpp
+	"template_dominios.hpp"
+
+1778196038 source:c:\users\arthur\documents\arthur\unb_mecatrônica\semestre_11\tp1\trabalho\trabalhotp1\dominios\prioridade.cpp
+
+1778196038 source:c:\users\arthur\documents\arthur\unb_mecatrônica\semestre_11\tp1\trabalho\trabalhotp1\dominios\senha.cpp
+
+1778196038 source:c:\users\arthur\documents\arthur\unb_mecatrônica\semestre_11\tp1\trabalho\trabalhotp1\dominios\tempo.cpp
+	"tempo.hpp"
+
+1778196038 c:\users\arthur\documents\arthur\unb_mecatrônica\semestre_11\tp1\trabalho\trabalhotp1\dominios\tempo.hpp
+	"template_dominios.hpp"
+
+1778196038 source:c:\users\arthur\documents\arthur\unb_mecatrônica\semestre_11\tp1\trabalho\trabalhotp1\dominios\texto.cpp
+	"texto.hpp"
+	<cctype>
+
+1778196038 c:\users\arthur\documents\arthur\unb_mecatrônica\semestre_11\tp1\trabalho\trabalhotp1\dominios\texto.hpp
+	"template_dominios.hpp"
+
+1778196038 source:c:\users\arthur\documents\arthur\unb_mecatrônica\semestre_11\tp1\trabalho\trabalhotp1\entidades\historia_usuario.cpp
+
+1778196038 source:c:\users\arthur\documents\arthur\unb_mecatrônica\semestre_11\tp1\trabalho\trabalhotp1\entidades\pessoa.cpp
+
+1778196038 source:c:\users\arthur\documents\arthur\unb_mecatrônica\semestre_11\tp1\trabalho\trabalhotp1\entidades\plano_sprint.cpp
+
+1778196038 source:c:\users\arthur\documents\arthur\unb_mecatrônica\semestre_11\tp1\trabalho\trabalhotp1\entidades\projeto.cpp
+
+1778196038 source:c:\users\arthur\documents\arthur\unb_mecatrônica\semestre_11\tp1\trabalho\trabalhotp1\main.cpp
+	<iostream>
+	"dominios/texto.hpp"
+	<vector>
+
+1778196038 source:c:\users\arthur\documents\arthur\unb_mecatrônica\semestre_11\tp1\trabalho\trabalhotp1\testesunitarios\tutemplate.cpp
+
+1778196038 source:c:\users\arthur\documents\arthur\unb_mecatrônica\semestre_11\tp1\trabalho\trabalhotp1\testesunitarios\tutempo.cpp
+
+1778199355 source:c:\users\arthur\documents\arthur\unb_mecatrônica\semestre_11\tp1\trabalho\trabalhotp1\dominios\estado.cpp
+	"estado.hpp"
+
+1778199355 c:\users\arthur\documents\arthur\unb_mecatrônica\semestre_11\tp1\trabalho\trabalhotp1\dominios\estado.hpp
+	"template_dominios.hpp"
+
