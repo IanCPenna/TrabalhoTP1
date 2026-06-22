@@ -1,19 +1,21 @@
 #include <iostream>
 
 #include <vector>
-#include "dominios/senha.hpp"
+#include "dominios/data.hpp"
 
 using namespace std;
 
 int main()
 {
-    Senha senha;
+    Data data;
 
     string entrada;
 
     cin >> entrada;
 
-    senha.setValor(entrada);
+    data.setValor(entrada);
+
+    cout << "Data:" << data.getValor() << "\n";
 
     return 0;
 }

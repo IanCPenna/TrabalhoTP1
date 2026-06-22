@@ -26,9 +26,10 @@
 
 1775591264 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\codigos\texto.cpp
 
-1777493437 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\main.cpp
+1781997119 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\main.cpp
 	<iostream>
-	"dominios/texto.hpp"
+	<vector>
+	"dominios/data.hpp"
 
 1777318993 c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\headers\tempo.hpp
 	"template_dominios.hpp"
@@ -42,23 +43,30 @@
 1777385331 c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\headers\papel.hpp
 	"template_dominios.hpp"
 
-1775591298 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\codigo.cpp
+1781996573 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\codigo.cpp
+	"codigo.hpp"
 
-1775591292 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\data.cpp
+1781996740 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\data.cpp
+	"data.hpp"
+	<string>
 
-1775591284 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\email.cpp
+1781996573 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\email.cpp
+	"email.hpp"
 
-1775591277 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\estado.cpp
+1781996573 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\estado.cpp
+	"estado.hpp"
 
 1777491523 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\nome.cpp
 	"nome.hpp"
 	<cctype>
 
-1775591258 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\prioridade.cpp
+1781996573 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\prioridade.cpp
+	"prioridade.hpp"
 
-1775591260 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\senha.cpp
+1781996573 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\senha.cpp
+	"senha.hpp"
 
-1777493465 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\texto.cpp
+1777558813 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\texto.cpp
 	"texto.hpp"
 	<cctype>
 
@@ -88,7 +96,7 @@
 1777491513 c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\nome.hpp
 	"template_dominios.hpp"
 
-1777387017 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\testesunitarios\tutemplate.cpp
+1777580763 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\testesunitarios\tutemplate.cpp
 
 1777386936 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\testesunitarios\tutempo.cpp
 
@@ -172,5 +180,24 @@
 	"template_dominios.hpp"
 
 1781482018 c:\dev\tp1\trabalho\dominios\senha.hpp
+	"template_dominios.hpp"
+
+1781996573 c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\codigo.hpp
+	"template_dominios.hpp"
+	<cctype>
+
+1781996573 c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\email.hpp
+	"template_dominios.hpp"
+
+1781996573 c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\estado.hpp
+	"template_dominios.hpp"
+
+1781996573 c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\prioridade.hpp
+	"template_dominios.hpp"
+
+1781996573 c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\senha.hpp
+	"template_dominios.hpp"
+
+1781997609 c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\data.hpp
 	"template_dominios.hpp"
 
