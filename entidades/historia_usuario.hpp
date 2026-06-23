@@ -41,4 +41,59 @@ public:
 };
 
 
+// Setters
+
+inline void HistoriaUsuario::setCodigo(const Codigo& codigo) {
+    this->codigo = codigo;
+}
+inline void HistoriaUsuario::setTitulo(const Texto& titulo) {
+    this->titulo = titulo;
+}
+inline void HistoriaUsuario::setPapel(const Texto& papel) {
+    this->papel = papel;
+}
+inline void HistoriaUsuario::setAcao(const Texto& acao) {
+    this->acao = acao;
+}
+inline void HistoriaUsuario::setValor(const Texto& valor) {
+    this->valor = valor;
+}
+inline void HistoriaUsuario::setEstimativa(const Tempo& estimativa) {
+    this->estimativa = estimativa;
+}
+inline void HistoriaUsuario::setPrioridade(const Prioridade& prioridade) {
+    this->prioridade = prioridade;
+}
+inline void HistoriaUsuario::setEstado(const Estado& estado) {
+    this->estado = estado;
+}
+
+
+// Getters
+
+inline Codigo HistoriaUsuario::getCodigo() const {
+    return codigo;
+}
+inline Texto HistoriaUsuario::getTitulo() const {
+    return titulo;
+}
+inline Texto HistoriaUsuario::getPapel() const {
+    return papel;
+}
+inline Texto HistoriaUsuario::getAcao() const {
+    return acao;
+}
+inline Texto HistoriaUsuario::getValor() const {
+    return valor;
+}
+inline Tempo HistoriaUsuario::getEstimativa() const {
+    return estimativa;
+}
+inline Prioridade HistoriaUsuario::getPrioridade() const {
+    return prioridade;
+}
+inline Estado HistoriaUsuario::getEstado() const {
+    return estado;
+}
+
 #endif // HISTORIA_USUARIO_HPP_INCLUDED
