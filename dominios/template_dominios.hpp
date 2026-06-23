@@ -3,7 +3,7 @@
 
 
 #include <stdexcept>
-
+#include <string>
 using namespace std;
 template <typename T>
 class Dominio {
