@@ -1,6 +1,6 @@
 #include "codigo.hpp"
 
-void Codido::validar(string valor){
+void Codigo::validar(string valor){
 
     if (valor.length() != TAMANHO) {
         throw invalid_argument("Código deve ter exatamente 5 caracteres.");

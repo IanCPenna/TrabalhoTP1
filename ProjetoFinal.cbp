@@ -62,6 +62,7 @@
 		<Unit filename="entidades/historia_usuario.cpp" />
 		<Unit filename="entidades/historia_usuario.hpp" />
 		<Unit filename="main.cpp" />
+		<Unit filename="testesUnitarios/TUData.hpp" />
 		<Unit filename="testesUnitarios/TUTemplate.cpp" />
 		<Unit filename="testesUnitarios/TUTemplate.hpp" />
 		<Unit filename="testesUnitarios/TUTempo.cpp" />
