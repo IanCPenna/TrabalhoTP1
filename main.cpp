@@ -1,21 +1,21 @@
 #include <iostream>
 
 #include <vector>
-#include "dominios/data.hpp"
+#include "dominios/senha.hpp"
+
+#include "testesUnitarios/TUData.hpp"
 
 using namespace std;
 
 int main()
 {
-    Data data;
-
-    string entrada;
-
-    cin >> entrada;
-
-    data.setValor(entrada);
-
-    cout << "Data:" << data.getValor() << "\n";
+    TUData testeData;
+    cout << "Testando Classe Data... " << endl;
+    if (testeData.run() == testeData.SUCESSO) {
+        cout << "SUCESSO!\n" << endl;
+    } else {
+        cout << "FALHA!\n" << endl;
+    }
 
     return 0;
 }

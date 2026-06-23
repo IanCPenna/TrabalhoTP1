@@ -1,5 +1,6 @@
 #ifndef DATA_HPP_INCLUDED
 #define DATA_HPP_INCLUDED
+#include "template_dominios.hpp"
 
 #include "template_dominios.hpp"
 
