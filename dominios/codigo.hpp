@@ -5,7 +5,7 @@
 
 #include <cctype>
 
-class Codido:public Dominio <string>{
+class Codigo:public Dominio <string>{
 private:
     void validar(string);
     static const int TAMANHO = 5;

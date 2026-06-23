@@ -5,14 +5,20 @@
 #include "testesUnitarios/TUPapel.hpp"
 #include "testesUnitarios/TUTempo.hpp"
 #include "testesUnitarios/TUTexto.hpp"
+#include "testesUnitarios/TUHistoriaUsuario.hpp"
 
 using namespace std;
 
 int main()
 {
+
+    cout    << "#####################\n"
+            << "#  Teste  Dominios  #\n"
+            << "#####################\n\n";
+
     {
         TUData teste;
-        cout << "Testando Classe Data... " << endl;
+        cout << "Testando Dominio Data... " << endl;
         if (teste.run() == teste.SUCESSO) {
             cout << "SUCESSO!\n" << endl;
         } else {
@@ -22,7 +28,7 @@ int main()
 
     {
         TUNome teste;
-        cout << "Testando Classe Nome... " << endl;
+        cout << "Testando Dominio Nome... " << endl;
         if (teste.run() == teste.SUCESSO) {
             cout << "SUCESSO!\n" << endl;
         } else {
@@ -32,7 +38,7 @@ int main()
 
     {
         TUPapel teste;
-        cout << "Testando Classe Papel... " << endl;
+        cout << "Testando Dominio Papel... " << endl;
         if (teste.run() == teste.SUCESSO) {
             cout << "SUCESSO!\n" << endl;
         } else {
@@ -42,7 +48,7 @@ int main()
 
     {
         TUTempo teste;
-        cout << "Testando Classe Tempo... " << endl;
+        cout << "Testando Dominio Tempo... " << endl;
         if (teste.run() == teste.SUCESSO) {
             cout << "SUCESSO!\n" << endl;
         } else {
@@ -52,7 +58,23 @@ int main()
 
     {
         TUTexto teste;
-        cout << "Testando Classe Texto... " << endl;
+        cout << "Testando Dominio Texto... " << endl;
+        if (teste.run() == teste.SUCESSO) {
+            cout << "SUCESSO!\n" << endl;
+        } else {
+            cout << "FALHA!\n" << endl;
+        }
+    }
+
+
+    cout    << "#####################\n"
+            << "#  Teste Entidades  #\n"
+            << "#####################\n\n";
+
+
+    {
+        TUHistoriaUsuario teste;
+        cout << "Testando Entidade Historia de Usuario... " << endl;
         if (teste.run() == teste.SUCESSO) {
             cout << "SUCESSO!\n" << endl;
         } else {

@@ -1,20 +1,20 @@
 #include "codigo.hpp"
 
-void Codido::validar(string valor){
+void Codigo::validar(string valor){
 
     if (valor.length() != TAMANHO) {
-        throw invalid_argument("Código deve ter exatamente 5 caracteres.");
+        throw invalid_argument("Cï¿½digo deve ter exatamente 5 caracteres.");
     }
 
     for (int i = 0; i < TLET; i++) {
         if (!isupper(valor[i])) {
-            throw invalid_argument("Os dois primeiros caracteres devem ser letras maiúsculas.");
+            throw invalid_argument("Os dois primeiros caracteres devem ser letras maiï¿½sculas.");
         }
     }
 
     for (int i = TLET; i < TAMANHO; i++) {
         if (!isdigit(valor[i])) {
-            throw invalid_argument("Os três últimos caracteres devem ser dígitos numéricos.");
+            throw invalid_argument("Os trï¿½s ï¿½ltimos caracteres devem ser dï¿½gitos numï¿½ricos.");
         }
     }
 
