@@ -1,5 +1,4 @@
 #include "data.hpp"
-#include <string>
 
 void Data::validar(string valor) {
     // 1. Valida��o b�sica de formato (tamanho e barras)

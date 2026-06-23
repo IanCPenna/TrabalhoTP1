@@ -62,10 +62,16 @@
 		<Unit filename="entidades/historia_usuario.cpp" />
 		<Unit filename="entidades/historia_usuario.hpp" />
 		<Unit filename="main.cpp" />
-		<Unit filename="testesUnitarios/TUTemplate.cpp" />
+		<Unit filename="testesUnitarios/TUData.hpp" />
+		<Unit filename="testesUnitarios/TUNome.cpp" />
+		<Unit filename="testesUnitarios/TUNome.hpp" />
+		<Unit filename="testesUnitarios/TUPapel.cpp" />
+		<Unit filename="testesUnitarios/TUPapel.hpp" />
 		<Unit filename="testesUnitarios/TUTemplate.hpp" />
 		<Unit filename="testesUnitarios/TUTempo.cpp" />
 		<Unit filename="testesUnitarios/TUTempo.hpp" />
+		<Unit filename="testesUnitarios/TUTexto.cpp" />
+		<Unit filename="testesUnitarios/TUTexto.hpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

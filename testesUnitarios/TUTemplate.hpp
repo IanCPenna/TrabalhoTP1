@@ -13,7 +13,7 @@ protected:
     T_Dominio *objeto;
     int estado;
 
-    T_Valor valorValido;
+    std::vector<T_Valor> valoresValidos;
     std::vector<T_Valor> valoresInvalidos;
 
     void setUp() {
@@ -37,12 +37,17 @@ public:
 
 template <class T_Dominio, typename T_Valor>
 void TUTemplate<T_Dominio, T_Valor>::testarCenarioSucesso() {
-    try {
-        objeto->setValor(valorValido);
-        if (objeto->getValor() != valorValido) estado = FALHA;
-    }
-    catch (const std::invalid_argument &excecao) {
-        estado = FALHA;
+
+    for (const T_Valor& valorAtual : valoresValidos){
+        try {
+            objeto->setValor(valorAtual);
+            if (objeto->getValor() != valorAtual) estado = FALHA;
+        }
+        catch (const std::invalid_argument &excecao) {
+            estado = FALHA;
+            std::cout << "[ERRO CRITICO NO TESTE] O valor '" << valorAtual
+                        << "' foi BARRADO indevidamente pelo objeto!" << std::endl;
+        }
     }
 }
 
@@ -56,8 +61,8 @@ void TUTemplate<T_Dominio, T_Valor>::testarCenarioFalha() {
         try {
             objeto->setValor(valorAtual);
 
-            // ATENÇÃO: Se chegou aqui, a classe FALHOU em barrar o erro.
-            // É vital imprimir esse aviso visual na cor vermelha mentalmente.
+            // ATENï¿½ï¿½O: Se chegou aqui, a classe FALHOU em barrar o erro.
+            // ï¿½ vital imprimir esse aviso visual na cor vermelha mentalmente.
             std::cout << "[ERRO CRITICO NO TESTE] O valor '" << valorAtual
                       << "' foi ACEITO indevidamente pelo objeto!" << std::endl;
 
@@ -65,9 +70,9 @@ void TUTemplate<T_Dominio, T_Valor>::testarCenarioFalha() {
         }
         catch (const std::invalid_argument &excecao) {
 
-            // O teste passou, mas imprimimos o log para sua verificação manual
-            std::cout << "[OK] Valor barrado: " << valorAtual
-                      << " | Motivo: " << excecao.what() << std::endl;
+            // O teste passou, mas imprimimos o log para sua verificaï¿½ï¿½o manual
+            //std::cout << "[OK] Valor barrado: " << valorAtual
+            //          << " | Motivo: " << excecao.what() << std::endl;
         }
     }
 }

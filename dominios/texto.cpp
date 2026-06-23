@@ -2,6 +2,8 @@
 #include <cctype>
 
 void Texto::validar(string texto){
+     if (texto.empty())
+        return;
 
     // Checar tamanho do texto
     if (texto.length() > TAMANHO)

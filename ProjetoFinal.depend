@@ -26,10 +26,13 @@
 
 1775591264 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\codigos\texto.cpp
 
-1781997119 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\main.cpp
+1782174226 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\main.cpp
 	<iostream>
-	<vector>
-	"dominios/data.hpp"
+	"testesUnitarios/TUData.hpp"
+	"testesUnitarios/TUNome.hpp"
+	"testesUnitarios/TUPapel.hpp"
+	"testesUnitarios/TUTempo.hpp"
+	"testesUnitarios/TUTexto.hpp"
 
 1777318993 c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\headers\tempo.hpp
 	"template_dominios.hpp"
@@ -46,9 +49,8 @@
 1781996573 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\codigo.cpp
 	"codigo.hpp"
 
-1781996740 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\data.cpp
+1782170029 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\data.cpp
 	"data.hpp"
-	<string>
 
 1781996573 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\email.cpp
 	"email.hpp"
@@ -66,7 +68,7 @@
 1781996573 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\senha.cpp
 	"senha.hpp"
 
-1777558813 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\texto.cpp
+1782174133 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\texto.cpp
 	"texto.hpp"
 	<cctype>
 
@@ -81,8 +83,9 @@
 1777385331 c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\papel.hpp
 	"template_dominios.hpp"
 
-1777318613 c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\template_dominios.hpp
+1782171476 c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\template_dominios.hpp
 	<stdexcept>
+	<string>
 
 1777386381 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\papel.cpp
 	"papel.hpp"
@@ -98,7 +101,8 @@
 
 1777580763 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\testesunitarios\tutemplate.cpp
 
-1777386936 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\testesunitarios\tutempo.cpp
+1782172556 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\testesunitarios\tutempo.cpp
+	"TUTempo.hpp"
 
 1777491602 c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\texto.hpp
 	"template_dominios.hpp"
@@ -198,6 +202,43 @@
 1781996573 c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\senha.hpp
 	"template_dominios.hpp"
 
-1781997609 c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\data.hpp
+1782170033 c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\dominios\data.hpp
 	"template_dominios.hpp"
+	<string>
+
+1782173260 c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\testesunitarios\tudata.hpp
+	"TUTemplate.hpp"
+	"../dominios/data.hpp"
+	<string>
+
+1782173668 c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\testesunitarios\tutemplate.hpp
+	<stdexcept>
+	<vector>
+	<string>
+	<iostream>
+
+1782172543 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\testesunitarios\tunome.cpp
+	"TUNome.hpp"
+
+1782173536 c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\testesunitarios\tunome.hpp
+	"TUTemplate.hpp"
+	"../dominios/nome.hpp"
+
+1782172513 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\testesunitarios\tupapel.cpp
+	"TUPapel.hpp"
+
+1782173536 c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\testesunitarios\tupapel.hpp
+	"TUTemplate.hpp"
+	"../dominios/papel.hpp"
+
+1782173536 c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\testesunitarios\tutempo.hpp
+	"TUTemplate.hpp"
+	"../dominios/tempo.hpp"
+
+1782174158 source:c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\testesunitarios\tutexto.cpp
+	"TUTexto.hpp"
+
+1782173536 c:\users\pedro\onedrive\documentos\unb\tp1\projeto\trabalhotp1\testesunitarios\tutexto.hpp
+	"TUTemplate.hpp"
+	"../dominios/texto.hpp"
 
