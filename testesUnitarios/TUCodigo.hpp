@@ -9,7 +9,8 @@ class TUCodigo : public TUTemplate<Codigo, std::string> {
 public:
     TUCodigo() {
         // Cenário de sucesso (Testando o caso mais complexo)
-        valorValido = "AB123";
+        valoresValidos={"AB123",
+                        "AD019"};
 
         // Cenários de falha (Ataque total à sua lógica de validação)
         valoresInvalidos = {

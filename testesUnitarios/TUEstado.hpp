@@ -9,7 +9,9 @@ class TUEstado : public TUTemplate<Estado, std::string> {
 public:
     TUEstado() {
         // Cenário de sucesso (Testando o caso mais complexo)
-        valorValido = "A FAZER";
+        valoresValidos =   {"A FAZER",
+                            "FAZENDO",
+                            "FEITO"};
 
         // Cenários de falha (Ataque total à sua lógica de validação)
         valoresInvalidos = {
