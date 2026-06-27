@@ -8,6 +8,7 @@
 #include "testesUnitarios/TUTempo.hpp"
 #include "testesUnitarios/TUTexto.hpp"
 #include "testesUnitarios/TUHistoriaUsuario.hpp"
+#include "testesUnitarios/TUPlanoSprint.hpp"
 
 using namespace std;
 
@@ -93,9 +94,19 @@ int main()
 
 
     {
-        TUHistoriaUsuario teste;
+        TUHistoriaUsuario testeHisUs;
         cout << "Testando Entidade Historia de Usuario... " << endl;
-        if (teste.run() == teste.SUCESSO) {
+        if (testeHisUs.run() == testeHisUs.SUCESSO) {
+            cout << "SUCESSO!\n" << endl;
+        } else {
+            cout << "FALHA!\n" << endl;
+        }
+    }
+
+    {
+        TUPlanoSprint testePlaSp;
+        cout << "Testando Entidade Plano Sprint... " << endl;
+        if (testePlaSp.run() == testePlaSp.SUCESSO) {
             cout << "SUCESSO!\n" << endl;
         } else {
             cout << "FALHA!\n" << endl;
