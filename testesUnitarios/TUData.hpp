@@ -19,7 +19,7 @@ public:
             "31/12/2999"
         };
 
-        // Cen�rios de falha (Ataque total � sua l�gica de valida��o)
+        // Cenarios de falha
         // valoresInvalidos = {
         //     "31/04/2023",
         //     "29/02/2023",
@@ -91,6 +91,5 @@ public:
         };
     }
 };
-
 
 #endif // TUDATA_HPP_INCLUDED

@@ -1,6 +1,11 @@
 #include "email.hpp"
 
 void Email::validar(string email){
+    // verifica se contém "@"
+    if(email.find("@") == string::npos){
+        throw invalid_argument("E-mail invalido: Deve conter '@'!");
+    }
+
     //divisão parte e dominio
     string parte_local = email.substr(0, email.find("@"));
     string dominio = email.substr(email.find("@") + 1);

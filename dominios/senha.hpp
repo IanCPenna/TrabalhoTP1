@@ -5,7 +5,7 @@
 
 class Senha:public Dominio<string>{
 private:
-    const int TAMANHO = 6;
+    static const int TAMANHO = 6;
     void validar(string);
 };
 

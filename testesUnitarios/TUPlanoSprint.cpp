@@ -23,7 +23,7 @@ void TUPlanoSprint::testarCenario() {
     Texto objetivo;
     objetivo.setValor(VALOR_VALIDO_OBJETIVO);
     entidade->setObjetivo(objetivo);
-    if (entidade->getObjetivo().getValor() != VALOR_VALIDO_OBJETIVO) //erro anunciado nessa linha, a 26
+    if (entidade->getObjetivo().getValor() != VALOR_VALIDO_OBJETIVO)
         estado = FALHA;
 
 

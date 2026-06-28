@@ -418,3 +418,199 @@
 1782593394 source:c:\users\arthur\documents\arthur\unb_mecatronica\semestre_11\tp1\trabalho\trabalhotp1\testesunitarios\tuplanosprint.cpp
 	"TUPlanoSprint.hpp"
 
+1782651408 source:c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\dominios\codigo.cpp
+	"codigo.hpp"
+
+1782651408 c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\dominios\codigo.hpp
+	"template_dominios.hpp"
+	<cctype>
+
+1782651408 c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\dominios\template_dominios.hpp
+	<stdexcept>
+	<string>
+
+1782651408 source:c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\dominios\data.cpp
+	"data.hpp"
+
+1782651408 c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\dominios\data.hpp
+	"template_dominios.hpp"
+	<string>
+
+1782653903 source:c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\dominios\email.cpp
+	"email.hpp"
+
+1782651408 c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\dominios\email.hpp
+	"template_dominios.hpp"
+
+1782651408 source:c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\dominios\estado.cpp
+	"estado.hpp"
+
+1782651408 c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\dominios\estado.hpp
+	"template_dominios.hpp"
+
+1782651408 source:c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\dominios\nome.cpp
+	"nome.hpp"
+	<cctype>
+
+1782651408 c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\dominios\nome.hpp
+	"template_dominios.hpp"
+
+1782651408 source:c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\dominios\papel.cpp
+	"papel.hpp"
+
+1782651408 c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\dominios\papel.hpp
+	"template_dominios.hpp"
+
+1782651408 source:c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\dominios\prioridade.cpp
+	"prioridade.hpp"
+
+1782651408 c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\dominios\prioridade.hpp
+	"template_dominios.hpp"
+
+1782651408 source:c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\dominios\senha.cpp
+	"senha.hpp"
+
+1782657902 c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\dominios\senha.hpp
+	"template_dominios.hpp"
+
+1782651408 source:c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\dominios\tempo.cpp
+	"tempo.hpp"
+
+1782651408 c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\dominios\tempo.hpp
+	"template_dominios.hpp"
+
+1782651408 source:c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\dominios\texto.cpp
+	"texto.hpp"
+	<cctype>
+
+1782651408 c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\dominios\texto.hpp
+	"template_dominios.hpp"
+
+1782651408 source:c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\entidades\historia_usuario.cpp
+
+1782651408 source:c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\entidades\pessoa.cpp
+
+1782651408 source:c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\entidades\plano_sprint.cpp
+
+1782651408 source:c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\entidades\projeto.cpp
+
+1782653369 source:c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\main.cpp
+	<iostream>
+	"testesUnitarios/TUData.hpp"
+	"testesUnitarios/TUCodigo.hpp"
+	"testesUnitarios/TUEstado.hpp"
+	"testesUnitarios/TUNome.hpp"
+	"testesUnitarios/TUPapel.hpp"
+	"testesUnitarios/TUTempo.hpp"
+	"testesUnitarios/TUTexto.hpp"
+	"testesUnitarios/TUEmail.hpp"
+	"testesUnitarios/TUPrioridade.hpp"
+	"testesUnitarios/TUSenha.hpp"
+	"testesUnitarios/TUHistoriaUsuario.hpp"
+	"testesUnitarios/TUPlanoSprint.hpp"
+
+1782652343 c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\testesunitarios\tudata.hpp
+	"TUTemplate.hpp"
+	"../dominios/data.hpp"
+	<string>
+
+1782651408 c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\testesunitarios\tutemplate.hpp
+	<stdexcept>
+	<vector>
+	<string>
+	<iostream>
+
+1782651408 c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\testesunitarios\tucodigo.hpp
+	"TUTemplate.hpp"
+	"../dominios/codigo.hpp"
+	<string>
+
+1782651408 c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\testesunitarios\tuestado.hpp
+	"TUTemplate.hpp"
+	"../dominios/estado.hpp"
+	<string>
+
+1782651408 c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\testesunitarios\tunome.hpp
+	"TUTemplate.hpp"
+	"../dominios/nome.hpp"
+
+1782651408 c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\testesunitarios\tupapel.hpp
+	"TUTemplate.hpp"
+	"../dominios/papel.hpp"
+
+1782651408 c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\testesunitarios\tutempo.hpp
+	"TUTemplate.hpp"
+	"../dominios/tempo.hpp"
+
+1782651408 c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\testesunitarios\tutexto.hpp
+	"TUTemplate.hpp"
+	"../dominios/texto.hpp"
+
+1782651408 c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\testesunitarios\tuhistoriausuario.hpp
+	"../entidades/historia_usuario.hpp"
+
+1782651408 c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\entidades\historia_usuario.hpp
+	"../dominios/codigo.hpp"
+	"../dominios/texto.hpp"
+	"../dominios/tempo.hpp"
+	"../dominios/prioridade.hpp"
+	"../dominios/estado.hpp"
+
+1782651408 c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\testesunitarios\tuplanosprint.hpp
+	"../entidades/Plano_Sprint.hpp"
+
+1782651408 c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\entidades\plano_sprint.hpp
+	"../dominios/codigo.hpp"
+	"../dominios/texto.hpp"
+	"../dominios/tempo.hpp"
+
+1782651408 source:c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\testesunitarios\tuhistoriausuario.cpp
+	"TUHistoriaUsuario.hpp"
+
+1782652383 source:c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\testesunitarios\tunome.cpp
+	"TUNome.hpp"
+
+1782651408 source:c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\testesunitarios\tupapel.cpp
+	"TUPapel.hpp"
+
+1782651408 source:c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\testesunitarios\tutempo.cpp
+	"TUTempo.hpp"
+
+1782651408 source:c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\testesunitarios\tutexto.cpp
+	"TUTexto.hpp"
+
+1782652301 source:c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\testesunitarios\tuplanosprint.cpp
+	"TUPlanoSprint.hpp"
+
+1782652905 c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\testesunitarios\tuemail.hpp
+	"TUTemplate.hpp"
+	"../dominios/email.hpp"
+
+1782653110 c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\testesunitarios\tuprioridade.hpp
+	"TUTemplate.hpp"
+	"../dominios/prioridade.hpp"
+
+1782653208 c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\testesunitarios\tusenha.hpp
+	"TUTemplate.hpp"
+	"../dominios/senha.hpp"
+
+1782652917 source:c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\testesunitarios\tuemail.cpp
+	"TUEmail.hpp"
+
+1782653176 source:c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\testesunitarios\tuprioridade.cpp
+	"TUPrioridade.hpp"
+
+1782653244 source:c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\testesunitarios\tusenha.cpp
+	"TUSenha.hpp"
+
+1782654604 source:c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\testesunitarios\tuprojeto.cpp
+	"TUProjeto.hpp"
+
+1782654628 c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\testesunitarios\tuprojeto.hpp
+	"../entidades/projeto.hpp"
+
+1782654277 c:\users\ricar\onedrive\햞ea de trabalho\tp1\trabalhotp1\entidades\projeto.hpp
+	"../dominios/codigo.hpp"
+	"../dominios/nome.hpp"
+	"../dominios/data.hpp"
+
