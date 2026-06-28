@@ -228,6 +228,7 @@ bool CntrLNHistoriaUsuario::excluir(const Codigo& codigo) {
         return false;
     historiaDeProjeto.erase(codigo.getValor());
     historiaDeSprint.erase(codigo.getValor());
+    historiaPessoa.erase(codigo.getValor()); // remove todas as associacoes com pessoas
     return true;
 }
 
@@ -294,4 +295,59 @@ bool CntrLNHistoriaUsuario::moverParaSprint(const Codigo& historia, const Codigo
     historiaDeProjeto.erase(historia.getValor());
     historiaDeSprint[historia.getValor()] = plano.getValor();
     return true;
+}
+
+bool CntrLNHistoriaUsuario::associarPessoa(const Codigo& historia, const Email& pessoa) {
+    // Valida existencia da historia.
+    HistoriaUsuario h;
+    h.setCodigo(historia);
+    if (!container.pesquisar(&h))
+        return false;
+
+    // Valida existencia da pessoa.
+    if (!cntrLNPessoa)
+        return false;
+    Pessoa p;
+    p.setEmail(pessoa);
+    if (!cntrLNPessoa->ler(&p))
+        return false;
+
+    // Evita associacao duplicada do mesmo par historia-pessoa.
+    pair<multimap<string, string>::iterator, multimap<string, string>::iterator> faixa =
+        historiaPessoa.equal_range(historia.getValor());
+    for (multimap<string, string>::iterator it = faixa.first; it != faixa.second; ++it) {
+        if (it->second == pessoa.getValor())
+            return false;
+    }
+
+    historiaPessoa.insert(make_pair(historia.getValor(), pessoa.getValor()));
+    return true;
+}
+
+bool CntrLNHistoriaUsuario::desassociarPessoa(const Codigo& historia, const Email& pessoa) {
+    pair<multimap<string, string>::iterator, multimap<string, string>::iterator> faixa =
+        historiaPessoa.equal_range(historia.getValor());
+    for (multimap<string, string>::iterator it = faixa.first; it != faixa.second; ++it) {
+        if (it->second == pessoa.getValor()) {
+            historiaPessoa.erase(it);
+            return true;
+        }
+    }
+    return false;
+}
+
+list<HistoriaUsuario> CntrLNHistoriaUsuario::listarPorPessoa(const Email& pessoa) {
+    list<HistoriaUsuario> resultado;
+    string alvo = pessoa.getValor();
+    for (multimap<string, string>::iterator it = historiaPessoa.begin(); it != historiaPessoa.end(); ++it) {
+        if (it->second == alvo) {
+            HistoriaUsuario h;
+            Codigo c;
+            c.setValor(it->first);
+            h.setCodigo(c);
+            if (container.pesquisar(&h))
+                resultado.push_back(h);
+        }
+    }
+    return resultado;
 }

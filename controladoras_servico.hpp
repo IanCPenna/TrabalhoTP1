@@ -106,12 +106,15 @@ private:
     ContainerHistoriaUsuario container;
     ILNProjeto* cntrLNProjeto;
     ILNPlanoSprint* cntrLNPlanoSprint;
+    ILNPessoa* cntrLNPessoa;
     CntrLNPlanoSprint* cntrLNPlanoSprintConcreto; ///< usado para consultar capacidade/associacao
     map<string, string> historiaDeProjeto; ///< codigoHistoria -> codigoProjeto
     map<string, string> historiaDeSprint;  ///< codigoHistoria -> codigoPlano
+    multimap<string, string> historiaPessoa; ///< codigoHistoria -> emailPessoa (muitos-para-muitos)
 public:
-    CntrLNHistoriaUsuario() : cntrLNProjeto(0), cntrLNPlanoSprint(0), cntrLNPlanoSprintConcreto(0) {}
+    CntrLNHistoriaUsuario() : cntrLNProjeto(0), cntrLNPlanoSprint(0), cntrLNPessoa(0), cntrLNPlanoSprintConcreto(0) {}
     void setCntrLNProjeto(ILNProjeto* cntr) { cntrLNProjeto = cntr; }
+    void setCntrLNPessoa(ILNPessoa* cntr) { cntrLNPessoa = cntr; }
     void setCntrLNPlanoSprint(CntrLNPlanoSprint* cntr) {
         cntrLNPlanoSprint = cntr;
         cntrLNPlanoSprintConcreto = cntr;
@@ -126,6 +129,9 @@ public:
     list<HistoriaUsuario> listarPorPlanoSprint(const Codigo& plano);
     bool alterarEstado(const Codigo& historia, const Estado& novoEstado);
     bool moverParaSprint(const Codigo& historia, const Codigo& plano);
+    bool associarPessoa(const Codigo& historia, const Email& pessoa);
+    bool desassociarPessoa(const Codigo& historia, const Email& pessoa);
+    list<HistoriaUsuario> listarPorPessoa(const Email& pessoa);
 };
 
 #endif // CONTROLADORAS_SERVICO_HPP_INCLUDED

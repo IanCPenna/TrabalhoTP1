@@ -200,6 +200,18 @@ public:
      * @return false se a soma das estimativas exceder a capacidade do plano.
      */
     virtual bool moverParaSprint(const Codigo& historia, const Codigo& plano) = 0;
+    /**
+     * @brief Estabelece associacao entre uma historia de usuario e uma pessoa.
+     * @return false se a historia ou a pessoa nao existem, ou se ja estao associadas.
+     */
+    virtual bool associarPessoa(const Codigo& historia, const Email& pessoa) = 0;
+    /**
+     * @brief Remove a associacao entre uma historia de usuario e uma pessoa.
+     * @return false se a associacao nao existe.
+     */
+    virtual bool desassociarPessoa(const Codigo& historia, const Email& pessoa) = 0;
+    /** @brief Lista as historias de usuario associadas a uma pessoa. */
+    virtual list<HistoriaUsuario> listarPorPessoa(const Email& pessoa) = 0;
     virtual ~ILNHistoriaUsuario() {}
 };
 

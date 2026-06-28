@@ -318,7 +318,9 @@ void CntrIUHistoriaUsuario::executar(const Email&) {
         cout << "\n=== Historia de Usuario ===\n"
              << "1 - Criar\n2 - Ler\n3 - Atualizar\n4 - Excluir\n5 - Listar\n"
              << "6 - Listar por projeto\n7 - Listar por plano de sprint\n"
-             << "8 - Alterar estado\n9 - Mover para plano de sprint\n0 - Voltar\n";
+             << "8 - Alterar estado\n9 - Mover para plano de sprint\n"
+             << "10 - Associar pessoa\n11 - Remover associacao de pessoa\n"
+             << "12 - Listar por pessoa\n0 - Voltar\n";
         opcao = lerOpcao("Opcao: ");
 
         if (opcao == 1) {
@@ -397,6 +399,26 @@ void CntrIUHistoriaUsuario::executar(const Email&) {
             cout << (cntrLNHistoriaUsuario->moverParaSprint(historia, plano)
                      ? "Historia movida para o plano de sprint.\n"
                      : "Falha: historia/plano inexistente ou capacidade excedida.\n");
+        } else if (opcao == 10) {
+            Codigo historia; Email pessoa;
+            if (!lerDominio("Codigo da historia: ", historia)) return;
+            if (!lerDominio("Email da pessoa: ", pessoa)) return;
+            cout << (cntrLNHistoriaUsuario->associarPessoa(historia, pessoa)
+                     ? "Pessoa associada a historia.\n"
+                     : "Falha: historia/pessoa inexistente ou ja associada.\n");
+        } else if (opcao == 11) {
+            Codigo historia; Email pessoa;
+            if (!lerDominio("Codigo da historia: ", historia)) return;
+            if (!lerDominio("Email da pessoa: ", pessoa)) return;
+            cout << (cntrLNHistoriaUsuario->desassociarPessoa(historia, pessoa)
+                     ? "Associacao removida.\n" : "Associacao nao encontrada.\n");
+        } else if (opcao == 12) {
+            Email pessoa;
+            if (!lerDominio("Email da pessoa: ", pessoa)) return;
+            list<HistoriaUsuario> hs = cntrLNHistoriaUsuario->listarPorPessoa(pessoa);
+            cout << "Total: " << hs.size() << "\n";
+            for (list<HistoriaUsuario>::iterator it = hs.begin(); it != hs.end(); ++it)
+                cout << "  - " << it->getCodigo().getValor() << "\n";
         } else if (opcao == -1) {
             return;
         }

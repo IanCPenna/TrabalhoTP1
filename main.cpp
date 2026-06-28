@@ -75,6 +75,7 @@ int main() {
     lnPlano.setCntrLNProjeto(&lnProjeto);
     lnHistoria.setCntrLNProjeto(&lnProjeto);
     lnHistoria.setCntrLNPlanoSprint(&lnPlano);
+    lnHistoria.setCntrLNPessoa(&lnPessoa);
 
     CntrIUAutenticacao    iuAutenticacao;
     CntrIUPessoa          iuPessoa;

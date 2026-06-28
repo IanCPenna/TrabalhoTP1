@@ -26,8 +26,10 @@
 | 22 Listar histórias por plano de sprint | OK |
 | 24 Mover história para plano de sprint | OK |
 | 25 Alterar estado de história | OK |
-| 17/18 Associar/remover associação História ↔ Pessoa | PENDENTE |
-| 23 Listar histórias associadas a pessoa | PENDENTE (depende de 17/18) |
+| 17/18 Associar/remover associação História ↔ Pessoa | OK |
+| 23 Listar histórias associadas a pessoa | OK |
+
+**Os 25 serviços da especificação estão implementados.**
 
 ## Regras de negócio
 
