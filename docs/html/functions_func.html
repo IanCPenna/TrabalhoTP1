@@ -1,0 +1,270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Trabalho TP1 - Sistema de Gestao de Projetos (Scrum): Membros de classe - Funções</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Trabalho TP1 - Sistema de Gestao de Projetos (Scrum)
+   </div>
+   <div id="projectbrief">Tecnicas de Programacao 1 - UnB</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('functions_func.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="contents">
+<div class="textblock">Esta é a list de todas as funções com links para a classe a que pertencem:</div><br/>
+<div class="qindex"><a class="qindex" href="#index_a">A</a><div class="alphasepar"></div><a class="qindex" href="#index_c">C</a><div class="alphasepar"></div><a class="qindex" href="#index_d">D</a><div class="alphasepar"></div><a class="qindex" href="#index_e">E</a><div class="alphasepar"></div><a class="qindex" href="#index_g">G</a><div class="alphasepar"></div><a class="qindex" href="#index_i">I</a><div class="alphasepar"></div><a class="qindex" href="#index_l">L</a><div class="alphasepar"></div><a class="qindex" href="#index_m">M</a><div class="alphasepar"></div><a class="qindex" href="#index_p">P</a><div class="alphasepar"></div><a class="qindex" href="#index_r">R</a><div class="alphasepar"></div><a class="qindex" href="#index_s">S</a><div class="alphasepar"></div><a class="qindex" href="#index_t">T</a><div class="alphasepar"></div><a class="qindex" href="#index_~">~</a></div>
+
+
+<h3 class="doxsection"><a id="index_a" name="index_a"></a>- a -</h3><ul>
+<li>alterarEstado()&#160;:&#160;<a class="el" href="class_cntr_l_n_historia_usuario.html#a62b57d953e0fde35babf0236932eadb9">CntrLNHistoriaUsuario</a>, <a class="el" href="class_i_l_n_historia_usuario.html#aa8bb184fdca34726c0944e093bc1dbe9">ILNHistoriaUsuario</a></li>
+<li>associarPessoa()&#160;:&#160;<a class="el" href="class_cntr_l_n_historia_usuario.html#a4f14d79a5afd904ae896936ae3b4085f">CntrLNHistoriaUsuario</a>, <a class="el" href="class_i_l_n_historia_usuario.html#a524cfd7195685204609c0d1ee63c6c76">ILNHistoriaUsuario</a></li>
+<li>atualizar()&#160;:&#160;<a class="el" href="class_cntr_l_n_historia_usuario.html#ad0333496beffd0f840cd317b036b4c42">CntrLNHistoriaUsuario</a>, <a class="el" href="class_cntr_l_n_pessoa.html#afd5f00a8d7200cb5d5f6931e106b54bd">CntrLNPessoa</a>, <a class="el" href="class_cntr_l_n_plano_sprint.html#aa89309fcff8e815b562a1eb76e26598c">CntrLNPlanoSprint</a>, <a class="el" href="class_cntr_l_n_projeto.html#a5ef15f44a477378aa3c57ae06c157ea5">CntrLNProjeto</a>, <a class="el" href="class_container_historia_usuario.html#a3ada01edd9ed7feca6ca4e2fd9b363ca">ContainerHistoriaUsuario</a>, <a class="el" href="class_container_pessoa.html#afedab7918086d2d056a5aac08fa65738">ContainerPessoa</a>, <a class="el" href="class_container_plano_sprint.html#ae841759f1177247451e8aaad8905cc53">ContainerPlanoSprint</a>, <a class="el" href="class_container_projeto.html#ae7f39b7160054bc1a6bbe9968727bad0">ContainerProjeto</a>, <a class="el" href="class_i_l_n_historia_usuario.html#a47f54ffb8d35cada891e528f398d1eca">ILNHistoriaUsuario</a>, <a class="el" href="class_i_l_n_pessoa.html#a4824138eeeb0fcd7fcb9d0ead20179ac">ILNPessoa</a>, <a class="el" href="class_i_l_n_plano_sprint.html#a83427823ca6503adaa195ce73160d2c2">ILNPlanoSprint</a>, <a class="el" href="class_i_l_n_projeto.html#a55f59de3f7c200a5ab72d925d7073908">ILNProjeto</a></li>
+<li>autenticar()&#160;:&#160;<a class="el" href="class_cntr_i_u_autenticacao.html#a51e50ac9c1027946489ab9c61b762277">CntrIUAutenticacao</a>, <a class="el" href="class_cntr_l_n_pessoa.html#a3822525502d0dbdc97d7cd2c39c699b9">CntrLNPessoa</a>, <a class="el" href="class_i_l_n_autenticacao.html#a8fd059756ad4dd57267b45a9717b62d5">ILNAutenticacao</a>, <a class="el" href="class_i_u_autenticacao.html#aec978b0481d81d2dbd6d8ed04934f942">IUAutenticacao</a></li>
+</ul>
+
+
+<h3 class="doxsection"><a id="index_c" name="index_c"></a>- c -</h3><ul>
+<li>cadastrar()&#160;:&#160;<a class="el" href="class_cntr_i_u_pessoa.html#a6dcc016ba5dcc5f7ea2560d93fc96c56">CntrIUPessoa</a>, <a class="el" href="class_i_u_pessoa.html#aa97fbb10962c381d448f4a465b14ea3b">IUPessoa</a></li>
+<li>CntrIUAutenticacao()&#160;:&#160;<a class="el" href="class_cntr_i_u_autenticacao.html#a2d7a57460da0583ba7e2fc559d650cd4">CntrIUAutenticacao</a></li>
+<li>CntrIUHistoriaUsuario()&#160;:&#160;<a class="el" href="class_cntr_i_u_historia_usuario.html#af306a8be14585b2ba58ec0f0dd47ed31">CntrIUHistoriaUsuario</a></li>
+<li>CntrIUPessoa()&#160;:&#160;<a class="el" href="class_cntr_i_u_pessoa.html#a1c97d316d8f3976e562ac6213c4e2f9a">CntrIUPessoa</a></li>
+<li>CntrIUPlanoSprint()&#160;:&#160;<a class="el" href="class_cntr_i_u_plano_sprint.html#af86ee3dbb54fd47a09e99366b6018683">CntrIUPlanoSprint</a></li>
+<li>CntrIUProjeto()&#160;:&#160;<a class="el" href="class_cntr_i_u_projeto.html#a6b1dfe07afd5e451181e69d47e63d0c5">CntrIUProjeto</a></li>
+<li>CntrLNHistoriaUsuario()&#160;:&#160;<a class="el" href="class_cntr_l_n_historia_usuario.html#a4b7261e3efd46efa51b7a40f6bef7643">CntrLNHistoriaUsuario</a></li>
+<li>CntrLNPlanoSprint()&#160;:&#160;<a class="el" href="class_cntr_l_n_plano_sprint.html#a33cdf3a0d2bc4443da75afd15cd95821">CntrLNPlanoSprint</a></li>
+<li>CntrLNProjeto()&#160;:&#160;<a class="el" href="class_cntr_l_n_projeto.html#ae0b4518e1c1aa3c75b47cdda142c881d">CntrLNProjeto</a></li>
+<li>criar()&#160;:&#160;<a class="el" href="class_cntr_l_n_historia_usuario.html#a72dc0314671d96fadc209e33c2a0571e">CntrLNHistoriaUsuario</a>, <a class="el" href="class_cntr_l_n_pessoa.html#afd2490bd12ef044cdd2fec3a00b7d235">CntrLNPessoa</a>, <a class="el" href="class_cntr_l_n_plano_sprint.html#a16a0930f3b2631e90bee362eff8c65eb">CntrLNPlanoSprint</a>, <a class="el" href="class_cntr_l_n_projeto.html#a9533335b88a65541b77a418384c5b9f5">CntrLNProjeto</a>, <a class="el" href="class_i_l_n_historia_usuario.html#a57c74cbaeb46f668c463e8deb5fd9d4a">ILNHistoriaUsuario</a>, <a class="el" href="class_i_l_n_pessoa.html#aa719b5ba26e73f3da77969d87c871417">ILNPessoa</a>, <a class="el" href="class_i_l_n_plano_sprint.html#a222315966b9b1e088eac087961aebc3f">ILNPlanoSprint</a>, <a class="el" href="class_i_l_n_projeto.html#a44d07ec38349673b27a61eb3cca921f0">ILNProjeto</a></li>
+</ul>
+
+
+<h3 class="doxsection"><a id="index_d" name="index_d"></a>- d -</h3><ul>
+<li>desassociarPessoa()&#160;:&#160;<a class="el" href="class_cntr_l_n_historia_usuario.html#a9ee88713e9fc5a52e43058aed974166d">CntrLNHistoriaUsuario</a>, <a class="el" href="class_i_l_n_historia_usuario.html#ac9252f9123a65cd437b7d26e4be28f19">ILNHistoriaUsuario</a></li>
+</ul>
+
+
+<h3 class="doxsection"><a id="index_e" name="index_e"></a>- e -</h3><ul>
+<li>excluir()&#160;:&#160;<a class="el" href="class_cntr_l_n_historia_usuario.html#acb06b86635c6166da526d580fba5f2eb">CntrLNHistoriaUsuario</a>, <a class="el" href="class_cntr_l_n_pessoa.html#a01ef2c602294cc656cf5c41fb8592fde">CntrLNPessoa</a>, <a class="el" href="class_cntr_l_n_plano_sprint.html#a230b93714a817b648cef27a79db650b5">CntrLNPlanoSprint</a>, <a class="el" href="class_cntr_l_n_projeto.html#a1e9dc98489f56c3ca02f541c9bb91585">CntrLNProjeto</a>, <a class="el" href="class_i_l_n_historia_usuario.html#a8f1ee28b1bb9a3e601bc3302537cfd0f">ILNHistoriaUsuario</a>, <a class="el" href="class_i_l_n_pessoa.html#a2f336f68b76c27c8bac592ae817dc6e2">ILNPessoa</a>, <a class="el" href="class_i_l_n_plano_sprint.html#a5f44b2894ccd90da0cf43c87ab8addb5">ILNPlanoSprint</a>, <a class="el" href="class_i_l_n_projeto.html#a28d5730de327a297bc21ef06a5f3b6af">ILNProjeto</a></li>
+<li>executar()&#160;:&#160;<a class="el" href="class_cntr_i_u_historia_usuario.html#aede01141a88d6a383c7b6c966be6a0c9">CntrIUHistoriaUsuario</a>, <a class="el" href="class_cntr_i_u_pessoa.html#a2ea1883418912db70e3eaca2efdf89ab">CntrIUPessoa</a>, <a class="el" href="class_cntr_i_u_plano_sprint.html#a96ec90c0b555a73a3e4305686282f3c8">CntrIUPlanoSprint</a>, <a class="el" href="class_cntr_i_u_projeto.html#a72076b33cb57ebf4c5259becff490640">CntrIUProjeto</a>, <a class="el" href="class_i_u_historia_usuario.html#a413f145cb00fc2d48d1281fffe783e4c">IUHistoriaUsuario</a>, <a class="el" href="class_i_u_pessoa.html#a2a5215c6ec826fc818ffea1c9ca6696d">IUPessoa</a>, <a class="el" href="class_i_u_plano_sprint.html#a2204a05290ab632f088e8d353a5e9cf5">IUPlanoSprint</a>, <a class="el" href="class_i_u_projeto.html#a6c819e4bec34f94f6fe0ff8171fcdaa8">IUProjeto</a></li>
+</ul>
+
+
+<h3 class="doxsection"><a id="index_g" name="index_g"></a>- g -</h3><ul>
+<li>getAcao()&#160;:&#160;<a class="el" href="class_historia_usuario.html#a8c5afdaa1b0c96f741f6a68ac10fd13f">HistoriaUsuario</a></li>
+<li>getCapacidade()&#160;:&#160;<a class="el" href="class_plano_sprint.html#a65a43e608d4d159162eca616fbc20d0c">PlanoSprint</a></li>
+<li>getCodigo()&#160;:&#160;<a class="el" href="class_historia_usuario.html#a20d74309dc8d5f5c274ceb928247c93f">HistoriaUsuario</a>, <a class="el" href="class_plano_sprint.html#a43495c7577e739b81813f57a22d403b9">PlanoSprint</a>, <a class="el" href="class_projeto.html#a5d9c3bb6177e5c62176347461bd620a3">Projeto</a></li>
+<li>getEmail()&#160;:&#160;<a class="el" href="class_pessoa.html#a137a2a665a10ffa4880d1f7d726b07c7">Pessoa</a></li>
+<li>getEstado()&#160;:&#160;<a class="el" href="class_historia_usuario.html#ad2773a4ff634386db5686dd8219874c4">HistoriaUsuario</a></li>
+<li>getEstimativa()&#160;:&#160;<a class="el" href="class_historia_usuario.html#ab1c3f740e55bbb62ec1eac15f9da1525">HistoriaUsuario</a></li>
+<li>getInicio()&#160;:&#160;<a class="el" href="class_projeto.html#ae68dfbb815e8a85340590eacc683e574">Projeto</a></li>
+<li>getNome()&#160;:&#160;<a class="el" href="class_pessoa.html#ad0c0448768ca2f5b5dfca86f156cdfe9">Pessoa</a>, <a class="el" href="class_projeto.html#a1eb1c0d356d0f662ac6fda75ff766004">Projeto</a></li>
+<li>getObjetivo()&#160;:&#160;<a class="el" href="class_plano_sprint.html#a67608d8633e8ee5c22b55e98c6f14948">PlanoSprint</a></li>
+<li>getPapel()&#160;:&#160;<a class="el" href="class_historia_usuario.html#a12c2f45d09716043d822292358ee6f8e">HistoriaUsuario</a>, <a class="el" href="class_pessoa.html#a8c7e1938888e9e84b5c30ca977b98b9d">Pessoa</a></li>
+<li>getPrioridade()&#160;:&#160;<a class="el" href="class_historia_usuario.html#a4932df4cb889365274edf09c8c3b82a7">HistoriaUsuario</a></li>
+<li>getSenha()&#160;:&#160;<a class="el" href="class_pessoa.html#a02498f338ca00cdd18e794f17d660281">Pessoa</a></li>
+<li>getTermino()&#160;:&#160;<a class="el" href="class_projeto.html#aaa3ccd83ad23021458cac35b74683168">Projeto</a></li>
+<li>getTitulo()&#160;:&#160;<a class="el" href="class_historia_usuario.html#a2e333c151ac001feb618a2ab7506f493">HistoriaUsuario</a></li>
+<li>getValor()&#160;:&#160;<a class="el" href="class_dominio.html#a79b674fe1274f34ba4d96e5db24c769f">Dominio&lt; T &gt;</a>, <a class="el" href="class_historia_usuario.html#afa2383c0a364b8e4df1c098415601f98">HistoriaUsuario</a></li>
+</ul>
+
+
+<h3 class="doxsection"><a id="index_i" name="index_i"></a>- i -</h3><ul>
+<li>incluir()&#160;:&#160;<a class="el" href="class_container_historia_usuario.html#a638b7f02b2cdf1cc76b046da4667b313">ContainerHistoriaUsuario</a>, <a class="el" href="class_container_pessoa.html#aa8d94dc54ca42e5c5fd5678175475797">ContainerPessoa</a>, <a class="el" href="class_container_plano_sprint.html#ac9880a506fa955f5def881352a141140">ContainerPlanoSprint</a>, <a class="el" href="class_container_projeto.html#a67bcd0c36d30d61f50c3643d4ded5131">ContainerProjeto</a></li>
+</ul>
+
+
+<h3 class="doxsection"><a id="index_l" name="index_l"></a>- l -</h3><ul>
+<li>ler()&#160;:&#160;<a class="el" href="class_cntr_l_n_historia_usuario.html#a7cd743c499156bce17af63f515ee201c">CntrLNHistoriaUsuario</a>, <a class="el" href="class_cntr_l_n_pessoa.html#aab0b0bd80c78b665a38e036550a75b2d">CntrLNPessoa</a>, <a class="el" href="class_cntr_l_n_plano_sprint.html#aefb528f51bd72dce2d8ef41770331980">CntrLNPlanoSprint</a>, <a class="el" href="class_cntr_l_n_projeto.html#a585c11cc004f340149c9d0a3a3293819">CntrLNProjeto</a>, <a class="el" href="class_i_l_n_historia_usuario.html#a86d9418a989b73d402c5b2876d0a8f35">ILNHistoriaUsuario</a>, <a class="el" href="class_i_l_n_pessoa.html#ae42e4bf74691c65e660f0543c193cf73">ILNPessoa</a>, <a class="el" href="class_i_l_n_plano_sprint.html#a13355a19cdb6c85f6e6e8496e2a65796">ILNPlanoSprint</a>, <a class="el" href="class_i_l_n_projeto.html#ab11d49a69e8dedb7701dfc1d3a4bfd7a">ILNProjeto</a></li>
+<li>listar()&#160;:&#160;<a class="el" href="class_cntr_l_n_historia_usuario.html#afdb768d421975159da1927328056b6c3">CntrLNHistoriaUsuario</a>, <a class="el" href="class_cntr_l_n_pessoa.html#a383b8121975bc6273afd563b3729c70f">CntrLNPessoa</a>, <a class="el" href="class_cntr_l_n_plano_sprint.html#ad11df1f8a1f3e7f2cfd08ca86b1d2ced">CntrLNPlanoSprint</a>, <a class="el" href="class_cntr_l_n_projeto.html#afaf48618bb32179d65e3d38f3c4eceb2">CntrLNProjeto</a>, <a class="el" href="class_container_historia_usuario.html#a233a05c43ed29880ff765afed9e2253c">ContainerHistoriaUsuario</a>, <a class="el" href="class_container_pessoa.html#aac61b7bab805ed3cc6cb79e315e78eb1">ContainerPessoa</a>, <a class="el" href="class_container_plano_sprint.html#ac8b27e36b5fa2233af8d97829b87df92">ContainerPlanoSprint</a>, <a class="el" href="class_container_projeto.html#a8e9807205a0ade5b6f79fcb84622713d">ContainerProjeto</a>, <a class="el" href="class_i_l_n_historia_usuario.html#ab13066649210dd7f19050c98a4a1212b">ILNHistoriaUsuario</a>, <a class="el" href="class_i_l_n_pessoa.html#a2ba0db1d77bcebbd367c9b133d517c18">ILNPessoa</a>, <a class="el" href="class_i_l_n_plano_sprint.html#acee3e22cdc4def2df5d796879a8f6769">ILNPlanoSprint</a>, <a class="el" href="class_i_l_n_projeto.html#ac738efd0c912cecffa114a52b64e7927">ILNProjeto</a></li>
+<li>listarPorPessoa()&#160;:&#160;<a class="el" href="class_cntr_l_n_historia_usuario.html#a37635c89e6f4fe03b50485f3fc9449c6">CntrLNHistoriaUsuario</a>, <a class="el" href="class_cntr_l_n_projeto.html#af4f7fb631ce493c0cb09db431569e653">CntrLNProjeto</a>, <a class="el" href="class_i_l_n_historia_usuario.html#affa24ad2f1842d1fd276b9d8cba26523">ILNHistoriaUsuario</a>, <a class="el" href="class_i_l_n_projeto.html#a4fae90fdac55dfae3a95a5cfedd209ef">ILNProjeto</a></li>
+<li>listarPorPlanoSprint()&#160;:&#160;<a class="el" href="class_cntr_l_n_historia_usuario.html#a0cca6cb5930c2526713aee6866adb437">CntrLNHistoriaUsuario</a>, <a class="el" href="class_i_l_n_historia_usuario.html#ac4db1277903a99c4e6899d85dce2981e">ILNHistoriaUsuario</a></li>
+<li>listarPorProjeto()&#160;:&#160;<a class="el" href="class_cntr_l_n_historia_usuario.html#ac736124f90c6f74aee117b5c02f3e2cd">CntrLNHistoriaUsuario</a>, <a class="el" href="class_cntr_l_n_plano_sprint.html#a690e8c3431d7d33975f07b586769fda5">CntrLNPlanoSprint</a>, <a class="el" href="class_i_l_n_historia_usuario.html#a272b4aca634df18c609b66dd2fa6b446">ILNHistoriaUsuario</a>, <a class="el" href="class_i_l_n_plano_sprint.html#a5c30044ae461dafcb9e86c17bd3179ef">ILNPlanoSprint</a></li>
+</ul>
+
+
+<h3 class="doxsection"><a id="index_m" name="index_m"></a>- m -</h3><ul>
+<li>moverParaSprint()&#160;:&#160;<a class="el" href="class_cntr_l_n_historia_usuario.html#aca6c90beb7c548758585d8ad7d5b0561">CntrLNHistoriaUsuario</a>, <a class="el" href="class_i_l_n_historia_usuario.html#adf05920e2f0cd144166fa24d6a34a606">ILNHistoriaUsuario</a></li>
+</ul>
+
+
+<h3 class="doxsection"><a id="index_p" name="index_p"></a>- p -</h3><ul>
+<li>pesquisar()&#160;:&#160;<a class="el" href="class_container_historia_usuario.html#a6654e6535e1ec9b9e5948e4f6dccab44">ContainerHistoriaUsuario</a>, <a class="el" href="class_container_pessoa.html#a32fa3da8000c88105634d050153790e0">ContainerPessoa</a>, <a class="el" href="class_container_plano_sprint.html#ad8061f6e4ffc80ca48946c944f10e921">ContainerPlanoSprint</a>, <a class="el" href="class_container_projeto.html#a3021a0609f9803ec0a52646be786e0fd">ContainerProjeto</a></li>
+<li>projetoDoPlano()&#160;:&#160;<a class="el" href="class_cntr_l_n_plano_sprint.html#a9e397c0bbf01b3b21436930edf873e29">CntrLNPlanoSprint</a></li>
+</ul>
+
+
+<h3 class="doxsection"><a id="index_r" name="index_r"></a>- r -</h3><ul>
+<li>remover()&#160;:&#160;<a class="el" href="class_container_historia_usuario.html#a3d3c0b679db79e1209e5583881ae368d">ContainerHistoriaUsuario</a>, <a class="el" href="class_container_pessoa.html#a866eacfc83cccb3dbebdf80978a9d50f">ContainerPessoa</a>, <a class="el" href="class_container_plano_sprint.html#af1806a54289819d3cc6706f90ccfa286">ContainerPlanoSprint</a>, <a class="el" href="class_container_projeto.html#a5b83a36e5e4951327115bd12dad251f9">ContainerProjeto</a></li>
+<li>run()&#160;:&#160;<a class="el" href="class_t_u_historia_usuario.html#a5b54da329a064259e630b3fe898883e4">TUHistoriaUsuario</a>, <a class="el" href="class_t_u_pessoa.html#aab95d4b039b6e3c22a0e4cd959c9ddc5">TUPessoa</a>, <a class="el" href="class_t_u_plano_sprint.html#a4eb072dfc00bde292845f6859b398ed3">TUPlanoSprint</a>, <a class="el" href="class_t_u_projeto.html#a87d7c15a616327485405931768707074">TUProjeto</a>, <a class="el" href="class_t_u_template.html#aec88c7d15fe966d3a5f7bf2a25ad2659">TUTemplate&lt; T_Dominio, T_Valor &gt;</a></li>
+</ul>
+
+
+<h3 class="doxsection"><a id="index_s" name="index_s"></a>- s -</h3><ul>
+<li>setAcao()&#160;:&#160;<a class="el" href="class_historia_usuario.html#a5b62727420e2335e3a562a4d97f183de">HistoriaUsuario</a></li>
+<li>setCapacidade()&#160;:&#160;<a class="el" href="class_plano_sprint.html#a59f1a9c445c02513cc78e9482bac7e6c">PlanoSprint</a></li>
+<li>setCntrLNAutenticacao()&#160;:&#160;<a class="el" href="class_cntr_i_u_autenticacao.html#adb3f890a3f5d61e267ebce08f4f791e8">CntrIUAutenticacao</a>, <a class="el" href="class_i_u_autenticacao.html#ad6d78c32444c830322a85e055d84b639">IUAutenticacao</a></li>
+<li>setCntrLNHistoriaUsuario()&#160;:&#160;<a class="el" href="class_cntr_i_u_historia_usuario.html#a365dddcd837b1eeefb3bbe28cbff9ba7">CntrIUHistoriaUsuario</a>, <a class="el" href="class_i_u_historia_usuario.html#ad893f47395573b371b20f9e983037ebc">IUHistoriaUsuario</a></li>
+<li>setCntrLNPessoa()&#160;:&#160;<a class="el" href="class_cntr_i_u_pessoa.html#a7b8a7cb6a594bcd8c09a9173d498be13">CntrIUPessoa</a>, <a class="el" href="class_cntr_l_n_historia_usuario.html#a407846d79c4afcb8f770f04443d86eb9">CntrLNHistoriaUsuario</a>, <a class="el" href="class_cntr_l_n_projeto.html#a6f2be086d1441f92bc0a29a325702142">CntrLNProjeto</a>, <a class="el" href="class_i_u_pessoa.html#afceea30761f55ce0aa3f2fd81403b60f">IUPessoa</a></li>
+<li>setCntrLNPlanoSprint()&#160;:&#160;<a class="el" href="class_cntr_i_u_plano_sprint.html#acb8b5412c222122a3a56e2ab58a5613c">CntrIUPlanoSprint</a>, <a class="el" href="class_cntr_l_n_historia_usuario.html#afa811388b219f368aa8e385eef3995fb">CntrLNHistoriaUsuario</a>, <a class="el" href="class_i_u_plano_sprint.html#abd4ad944431a794b82402a39f3d98a63">IUPlanoSprint</a></li>
+<li>setCntrLNProjeto()&#160;:&#160;<a class="el" href="class_cntr_i_u_projeto.html#a225a568622571c6df23d2eace29e4cf4">CntrIUProjeto</a>, <a class="el" href="class_cntr_l_n_historia_usuario.html#a224be491843cbbda1a2a3efe57648235">CntrLNHistoriaUsuario</a>, <a class="el" href="class_cntr_l_n_plano_sprint.html#ab488595a257e84b71ca75539c225548d">CntrLNPlanoSprint</a>, <a class="el" href="class_i_u_projeto.html#ad5e83e9e65b13dac13855b2d4bb03579">IUProjeto</a></li>
+<li>setCodigo()&#160;:&#160;<a class="el" href="class_historia_usuario.html#a2a4bade3ff34d0ca3031a7380f36bc20">HistoriaUsuario</a>, <a class="el" href="class_plano_sprint.html#a06abae7ded07c93e848ce9f1e1703336">PlanoSprint</a>, <a class="el" href="class_projeto.html#a7474ab46180b997142a9497104dee87f">Projeto</a></li>
+<li>setEmail()&#160;:&#160;<a class="el" href="class_pessoa.html#a07c9dc9687e897de901a0361cdae0401">Pessoa</a></li>
+<li>setEstado()&#160;:&#160;<a class="el" href="class_historia_usuario.html#a88436e63cd2402d1abb8a07e918d9589">HistoriaUsuario</a></li>
+<li>setEstimativa()&#160;:&#160;<a class="el" href="class_historia_usuario.html#a4d23c6ddcb3c92784c2a212c11f62ded">HistoriaUsuario</a></li>
+<li>setInicio()&#160;:&#160;<a class="el" href="class_projeto.html#a79076fb6c5acbbff4bfd78f33ba7fc3e">Projeto</a></li>
+<li>setNome()&#160;:&#160;<a class="el" href="class_pessoa.html#afddbfe1fabc8e39b53f9b59b24702591">Pessoa</a>, <a class="el" href="class_projeto.html#a83d37c342dd08d8b4b67dcc447b4defc">Projeto</a></li>
+<li>setObjetivo()&#160;:&#160;<a class="el" href="class_plano_sprint.html#a77a2239a9c2e8e61d08371c05cba9350">PlanoSprint</a></li>
+<li>setPapel()&#160;:&#160;<a class="el" href="class_historia_usuario.html#a17d5268c2b0a39b9add3bda4b34270ad">HistoriaUsuario</a>, <a class="el" href="class_pessoa.html#af9fd246c333ffb8c8deef7a4c00fed68">Pessoa</a></li>
+<li>setPrioridade()&#160;:&#160;<a class="el" href="class_historia_usuario.html#a915a96afb3f1376d6267d9b8eea476b3">HistoriaUsuario</a></li>
+<li>setSenha()&#160;:&#160;<a class="el" href="class_pessoa.html#a57ed4246933f9585fc92a4adf9e1f69f">Pessoa</a></li>
+<li>setTermino()&#160;:&#160;<a class="el" href="class_projeto.html#acbd91d31dd90a613684ea19dbac1061b">Projeto</a></li>
+<li>setTitulo()&#160;:&#160;<a class="el" href="class_historia_usuario.html#aa4abd204ea3f4a2ada6a1c51129a0d87">HistoriaUsuario</a></li>
+<li>setUp()&#160;:&#160;<a class="el" href="class_t_u_template.html#acce387084030cb9dbd71b0694ef117f2">TUTemplate&lt; T_Dominio, T_Valor &gt;</a></li>
+<li>setValor()&#160;:&#160;<a class="el" href="class_dominio.html#aa5a7551c11de6de9c86c3cdb3cf01e8c">Dominio&lt; T &gt;</a>, <a class="el" href="class_historia_usuario.html#ab0043edfcc8b3bfbbc68378a72093d5c">HistoriaUsuario</a></li>
+</ul>
+
+
+<h3 class="doxsection"><a id="index_t" name="index_t"></a>- t -</h3><ul>
+<li>tearDown()&#160;:&#160;<a class="el" href="class_t_u_template.html#aba4958a5f8bac059f792861bbb1961f4">TUTemplate&lt; T_Dominio, T_Valor &gt;</a></li>
+<li>testarCenarioFalha()&#160;:&#160;<a class="el" href="class_t_u_template.html#a3c6a3a293241fc476c133dad8a7b4d24">TUTemplate&lt; T_Dominio, T_Valor &gt;</a></li>
+<li>testarCenarioSucesso()&#160;:&#160;<a class="el" href="class_t_u_template.html#aba8bf7a2a0d69dc53404850e88937fd1">TUTemplate&lt; T_Dominio, T_Valor &gt;</a></li>
+<li>TUCodigo()&#160;:&#160;<a class="el" href="class_t_u_codigo.html#aa71230d24d96be5edb43142da454672f">TUCodigo</a></li>
+<li>TUData()&#160;:&#160;<a class="el" href="class_t_u_data.html#a5ed3263fb47ea5f0f445c431c311c59e">TUData</a></li>
+<li>TUEmail()&#160;:&#160;<a class="el" href="class_t_u_email.html#ae506eeb7b16a5aa88a454d56be6ab81b">TUEmail</a></li>
+<li>TUEstado()&#160;:&#160;<a class="el" href="class_t_u_estado.html#a769833fd33907493f2a174509cc11153">TUEstado</a></li>
+<li>TUNome()&#160;:&#160;<a class="el" href="class_t_u_nome.html#a4be71c07419adf710f8bf0f1e602f35e">TUNome</a></li>
+<li>TUPapel()&#160;:&#160;<a class="el" href="class_t_u_papel.html#accbf217e41a0368a0b4decf716749219">TUPapel</a></li>
+<li>TUPrioridade()&#160;:&#160;<a class="el" href="class_t_u_prioridade.html#a44685ac146e2967f59481f9f5395f637">TUPrioridade</a></li>
+<li>TUSenha()&#160;:&#160;<a class="el" href="class_t_u_senha.html#a3d91706774b0f1a40f047506cb0a3637">TUSenha</a></li>
+<li>TUTempo()&#160;:&#160;<a class="el" href="class_t_u_tempo.html#ae0dcdfd61fd94db99b9d66a104bb3ec4">TUTempo</a></li>
+<li>TUTexto()&#160;:&#160;<a class="el" href="class_t_u_texto.html#a030ff9c8042b8fe9ba937a9733c0bc8b">TUTexto</a></li>
+</ul>
+
+
+<h3 class="doxsection"><a id="index__7E" name="index__7E"></a>- ~ -</h3><ul>
+<li>~ILNAutenticacao()&#160;:&#160;<a class="el" href="class_i_l_n_autenticacao.html#af7cd02ea21ccb148cac94ecddf656c8c">ILNAutenticacao</a></li>
+<li>~ILNHistoriaUsuario()&#160;:&#160;<a class="el" href="class_i_l_n_historia_usuario.html#a7d16d11f47e60da8dd1ccd085f173a50">ILNHistoriaUsuario</a></li>
+<li>~ILNPessoa()&#160;:&#160;<a class="el" href="class_i_l_n_pessoa.html#a738042ff692c83a3552b2bc0e2c8e006">ILNPessoa</a></li>
+<li>~ILNPlanoSprint()&#160;:&#160;<a class="el" href="class_i_l_n_plano_sprint.html#acc39a1f384fa3e638d354b28560408cc">ILNPlanoSprint</a></li>
+<li>~ILNProjeto()&#160;:&#160;<a class="el" href="class_i_l_n_projeto.html#a6a6a2c7c957eed11463746b9a2c86028">ILNProjeto</a></li>
+<li>~IUAutenticacao()&#160;:&#160;<a class="el" href="class_i_u_autenticacao.html#a1368604b08e54a9adb12751ff26e5846">IUAutenticacao</a></li>
+<li>~IUHistoriaUsuario()&#160;:&#160;<a class="el" href="class_i_u_historia_usuario.html#a1beb790fdfb70224fd7bd58e3b1079e1">IUHistoriaUsuario</a></li>
+<li>~IUPessoa()&#160;:&#160;<a class="el" href="class_i_u_pessoa.html#ac00f192923febbfe1102e235c1cd7a7e">IUPessoa</a></li>
+<li>~IUPlanoSprint()&#160;:&#160;<a class="el" href="class_i_u_plano_sprint.html#a0e6aa70a8d99e40f24a34f977ec86dae">IUPlanoSprint</a></li>
+<li>~IUProjeto()&#160;:&#160;<a class="el" href="class_i_u_projeto.html#aabc02b0736143f90765218905d00d86d">IUProjeto</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

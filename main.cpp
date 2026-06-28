@@ -120,20 +120,31 @@ int main() {
                 cout << "Credenciais invalidas.\n";
                 continue;
             }
-            cout << "\nAutenticado como: " << usuarioLogado.getValor() << "\n";
+            // Recupera o papel do usuario autenticado (define suas permissoes).
+            Pessoa pessoaLogada;
+            pessoaLogada.setEmail(usuarioLogado);
+            lnPessoa.ler(&pessoaLogada);
+            Papel papelLogado = pessoaLogada.getPapel();
+            cout << "\nAutenticado como: " << usuarioLogado.getValor()
+                 << " (" << papelLogado.getValor() << ")\n";
 
             // 4. Menu principal: servicos disponiveis apos autenticado.
+            //    Operacoes restritas por papel lancam runtime_error, capturado aqui.
             int opcao;
             do {
                 opcao = lerOpcao(menuPrincipal);
-                switch (opcao) {
-                    case 1: iuPessoa.executar(usuarioLogado);   break;
-                    case 2: iuProjeto.executar(usuarioLogado);  break;
-                    case 3: iuPlano.executar(usuarioLogado);    break;
-                    case 4: iuHistoria.executar(usuarioLogado); break;
-                    case 0:
-                    case -1: cout << "\nLogout.\n"; break;
-                    default: cout << "Opcao invalida.\n"; break;
+                try {
+                    switch (opcao) {
+                        case 1: iuPessoa.executar(papelLogado);   break;
+                        case 2: iuProjeto.executar(papelLogado);  break;
+                        case 3: iuPlano.executar(papelLogado);    break;
+                        case 4: iuHistoria.executar(papelLogado); break;
+                        case 0:
+                        case -1: cout << "\nLogout.\n"; break;
+                        default: cout << "Opcao invalida.\n"; break;
+                    }
+                } catch (const runtime_error& excecao) {
+                    cout << excecao.what() << "\n";
                 }
             } while (opcao != 0 && opcao != -1);
 

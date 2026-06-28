@@ -1,6 +1,27 @@
 #include "controladoras_servico.hpp"
 
 // ---------------------------------------------------------------------------
+//  Funcao auxiliar: autorizacao por papel (tabela ID SERVICO / PAPEIS).
+// ---------------------------------------------------------------------------
+
+/**
+ * @brief Verifica se o papel do solicitante esta entre os papeis permitidos.
+ * @param solicitante Papel do usuario que solicita o servico.
+ * @param permitido1 Primeiro papel autorizado.
+ * @param permitido2 Segundo papel autorizado (opcional).
+ * @throw runtime_error se o papel do solicitante nao esta autorizado.
+ */
+static void exigirPapel(const Papel& solicitante,
+                        const string& permitido1,
+                        const string& permitido2 = "") {
+    const string papel = solicitante.getValor();
+    if (papel == permitido1 || (!permitido2.empty() && papel == permitido2))
+        return;
+    throw runtime_error("Acesso negado: o papel '" + papel +
+                        "' nao tem permissao para executar este servico.");
+}
+
+// ---------------------------------------------------------------------------
 //  Funcao auxiliar: numero de dias entre duas datas no formato DD/MM/AAAA.
 // ---------------------------------------------------------------------------
 
@@ -71,7 +92,9 @@ bool CntrLNPessoa::autenticar(const Email& email, const Senha& senha) {
 //  CntrLNProjeto
 // ===========================================================================
 
-bool CntrLNProjeto::criar(const Projeto& projeto, const Email& proprietario, const Email& mestreScrum) {
+bool CntrLNProjeto::criar(const Projeto& projeto, const Email& proprietario, const Email& mestreScrum, const Papel& solicitante) {
+    exigirPapel(solicitante, "PROPRIETARIO DE PRODUTO");
+
     // Valida existencia e papel do proprietario de produto.
     Pessoa pProp;
     pProp.setEmail(proprietario);
@@ -100,11 +123,13 @@ bool CntrLNProjeto::ler(Projeto* projeto) {
     return container.pesquisar(projeto);
 }
 
-bool CntrLNProjeto::atualizar(const Projeto& projeto) {
+bool CntrLNProjeto::atualizar(const Projeto& projeto, const Papel& solicitante) {
+    exigirPapel(solicitante, "PROPRIETARIO DE PRODUTO");
     return container.atualizar(projeto);
 }
 
-bool CntrLNProjeto::excluir(const Codigo& codigo) {
+bool CntrLNProjeto::excluir(const Codigo& codigo, const Papel& solicitante) {
+    exigirPapel(solicitante, "PROPRIETARIO DE PRODUTO");
     if (!container.remover(codigo))
         return false;
     proprietarioDe.erase(codigo.getValor());
@@ -132,7 +157,9 @@ list<Projeto> CntrLNProjeto::listarPorPessoa(const Email& email) {
 //  CntrLNPlanoSprint
 // ===========================================================================
 
-bool CntrLNPlanoSprint::criar(const PlanoSprint& plano, const Codigo& projeto) {
+bool CntrLNPlanoSprint::criar(const PlanoSprint& plano, const Codigo& projeto, const Papel& solicitante) {
+    exigirPapel(solicitante, "MESTRE SCRUM");
+
     // Valida existencia do projeto.
     if (!cntrLNProjeto)
         return false;
@@ -163,11 +190,13 @@ bool CntrLNPlanoSprint::ler(PlanoSprint* plano) {
     return container.pesquisar(plano);
 }
 
-bool CntrLNPlanoSprint::atualizar(const PlanoSprint& plano) {
+bool CntrLNPlanoSprint::atualizar(const PlanoSprint& plano, const Papel& solicitante) {
+    exigirPapel(solicitante, "MESTRE SCRUM");
     return container.atualizar(plano);
 }
 
-bool CntrLNPlanoSprint::excluir(const Codigo& codigo) {
+bool CntrLNPlanoSprint::excluir(const Codigo& codigo, const Papel& solicitante) {
+    exigirPapel(solicitante, "MESTRE SCRUM");
     if (!container.remover(codigo))
         return false;
     planoDeProjeto.erase(codigo.getValor());
@@ -199,7 +228,9 @@ string CntrLNPlanoSprint::projetoDoPlano(const string& codigoPlano) {
 //  CntrLNHistoriaUsuario
 // ===========================================================================
 
-bool CntrLNHistoriaUsuario::criar(const HistoriaUsuario& historia, const Codigo& projeto) {
+bool CntrLNHistoriaUsuario::criar(const HistoriaUsuario& historia, const Codigo& projeto, const Papel& solicitante) {
+    exigirPapel(solicitante, "PROPRIETARIO DE PRODUTO");
+
     // Valida existencia do projeto.
     if (!cntrLNProjeto)
         return false;
@@ -219,11 +250,13 @@ bool CntrLNHistoriaUsuario::ler(HistoriaUsuario* historia) {
     return container.pesquisar(historia);
 }
 
-bool CntrLNHistoriaUsuario::atualizar(const HistoriaUsuario& historia) {
+bool CntrLNHistoriaUsuario::atualizar(const HistoriaUsuario& historia, const Papel& solicitante) {
+    exigirPapel(solicitante, "PROPRIETARIO DE PRODUTO");
     return container.atualizar(historia);
 }
 
-bool CntrLNHistoriaUsuario::excluir(const Codigo& codigo) {
+bool CntrLNHistoriaUsuario::excluir(const Codigo& codigo, const Papel& solicitante) {
+    exigirPapel(solicitante, "PROPRIETARIO DE PRODUTO");
     if (!container.remover(codigo))
         return false;
     historiaDeProjeto.erase(codigo.getValor());
@@ -256,7 +289,8 @@ list<HistoriaUsuario> CntrLNHistoriaUsuario::listarPorPlanoSprint(const Codigo& 
     return resultado;
 }
 
-bool CntrLNHistoriaUsuario::alterarEstado(const Codigo& historia, const Estado& novoEstado) {
+bool CntrLNHistoriaUsuario::alterarEstado(const Codigo& historia, const Estado& novoEstado, const Papel& solicitante) {
+    exigirPapel(solicitante, "PROPRIETARIO DE PRODUTO", "MESTRE SCRUM");
     HistoriaUsuario h;
     h.setCodigo(historia);
     if (!container.pesquisar(&h))
@@ -265,7 +299,9 @@ bool CntrLNHistoriaUsuario::alterarEstado(const Codigo& historia, const Estado& 
     return container.atualizar(h);
 }
 
-bool CntrLNHistoriaUsuario::moverParaSprint(const Codigo& historia, const Codigo& plano) {
+bool CntrLNHistoriaUsuario::moverParaSprint(const Codigo& historia, const Codigo& plano, const Papel& solicitante) {
+    exigirPapel(solicitante, "MESTRE SCRUM");
+
     // Valida existencia da historia.
     HistoriaUsuario h;
     h.setCodigo(historia);
@@ -297,7 +333,9 @@ bool CntrLNHistoriaUsuario::moverParaSprint(const Codigo& historia, const Codigo
     return true;
 }
 
-bool CntrLNHistoriaUsuario::associarPessoa(const Codigo& historia, const Email& pessoa) {
+bool CntrLNHistoriaUsuario::associarPessoa(const Codigo& historia, const Email& pessoa, const Papel& solicitante) {
+    exigirPapel(solicitante, "MESTRE SCRUM");
+
     // Valida existencia da historia.
     HistoriaUsuario h;
     h.setCodigo(historia);
@@ -324,7 +362,8 @@ bool CntrLNHistoriaUsuario::associarPessoa(const Codigo& historia, const Email& 
     return true;
 }
 
-bool CntrLNHistoriaUsuario::desassociarPessoa(const Codigo& historia, const Email& pessoa) {
+bool CntrLNHistoriaUsuario::desassociarPessoa(const Codigo& historia, const Email& pessoa, const Papel& solicitante) {
+    exigirPapel(solicitante, "MESTRE SCRUM");
     pair<multimap<string, string>::iterator, multimap<string, string>::iterator> faixa =
         historiaPessoa.equal_range(historia.getValor());
     for (multimap<string, string>::iterator it = faixa.first; it != faixa.second; ++it) {

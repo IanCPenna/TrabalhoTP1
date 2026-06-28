@@ -1,0 +1,298 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Trabalho TP1 - Sistema de Gestao de Projetos (Scrum): Código-Fonte de controladoras_servico.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Trabalho TP1 - Sistema de Gestao de Projetos (Scrum)
+   </div>
+   <div id="projectbrief">Tecnicas de Programacao 1 - UnB</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('controladoras__servico_8hpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">controladoras_servico.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="controladoras__servico_8hpp.html">Ir para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef CONTROLADORAS_SERVICO_HPP_INCLUDED</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define CONTROLADORAS_SERVICO_HPP_INCLUDED</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="interfaces_8hpp.html">interfaces.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="containers_8hpp.html">containers.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span></div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="};">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_cntr_l_n_pessoa.html">   29</a></span><span class="keyword">class </span><a class="code hl_class" href="class_cntr_l_n_pessoa.html">CntrLNPessoa</a> : <span class="keyword">public</span> <a class="code hl_interface" href="class_i_l_n_pessoa.html">ILNPessoa</a>, <span class="keyword">public</span> <a class="code hl_interface" href="class_i_l_n_autenticacao.html">ILNAutenticacao</a> {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <a class="code hl_class" href="class_container_pessoa.html">ContainerPessoa</a> container;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_cntr_l_n_pessoa.html#afd2490bd12ef044cdd2fec3a00b7d235">criar</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_pessoa.html">Pessoa</a>&amp; pessoa);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_cntr_l_n_pessoa.html#aab0b0bd80c78b665a38e036550a75b2d">ler</a>(<a class="code hl_class" href="class_pessoa.html">Pessoa</a>* pessoa);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_cntr_l_n_pessoa.html#afd5f00a8d7200cb5d5f6931e106b54bd">atualizar</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_pessoa.html">Pessoa</a>&amp; pessoa);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_cntr_l_n_pessoa.html#a01ef2c602294cc656cf5c41fb8592fde">excluir</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_email.html">Email</a>&amp; email);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    list&lt;Pessoa&gt; <a class="code hl_function" href="class_cntr_l_n_pessoa.html#a383b8121975bc6273afd563b3729c70f">listar</a>();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_cntr_l_n_pessoa.html#a3822525502d0dbdc97d7cd2c39c699b9">autenticar</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_email.html">Email</a>&amp; email, <span class="keyword">const</span> <a class="code hl_class" href="class_senha.html">Senha</a>&amp; senha);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>};</div>
+</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span></div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="};">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_cntr_l_n_projeto.html">   50</a></span><span class="keyword">class </span><a class="code hl_function" href="class_cntr_l_n_projeto.html#ae0b4518e1c1aa3c75b47cdda142c881d">CntrLNProjeto</a> : <span class="keyword">public</span> <a class="code hl_interface" href="class_i_l_n_projeto.html">ILNProjeto</a> {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <a class="code hl_class" href="class_container_projeto.html">ContainerProjeto</a> container;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <a class="code hl_interface" href="class_i_l_n_pessoa.html">ILNPessoa</a>* cntrLNPessoa;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    map&lt;string, string&gt; proprietarioDe; </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    map&lt;string, string&gt; mestreDe;       </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_cntr_l_n_projeto.html#ae0b4518e1c1aa3c75b47cdda142c881d">   57</a></span>    <a class="code hl_function" href="class_cntr_l_n_projeto.html#ae0b4518e1c1aa3c75b47cdda142c881d">CntrLNProjeto</a>() : cntrLNPessoa(0) {}</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_cntr_l_n_projeto.html#a6f2be086d1441f92bc0a29a325702142">   58</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_l_n_projeto.html#a6f2be086d1441f92bc0a29a325702142">setCntrLNPessoa</a>(<a class="code hl_interface" href="class_i_l_n_pessoa.html">ILNPessoa</a>* cntr) { cntrLNPessoa = cntr; }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_cntr_l_n_projeto.html#a9533335b88a65541b77a418384c5b9f5">criar</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_projeto.html">Projeto</a>&amp; projeto, <span class="keyword">const</span> <a class="code hl_class" href="class_email.html">Email</a>&amp; proprietario, <span class="keyword">const</span> <a class="code hl_class" href="class_email.html">Email</a>&amp; mestreScrum);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_cntr_l_n_projeto.html#a585c11cc004f340149c9d0a3a3293819">ler</a>(<a class="code hl_class" href="class_projeto.html">Projeto</a>* projeto);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_cntr_l_n_projeto.html#a5ef15f44a477378aa3c57ae06c157ea5">atualizar</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_projeto.html">Projeto</a>&amp; projeto);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_cntr_l_n_projeto.html#a1e9dc98489f56c3ca02f541c9bb91585">excluir</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_codigo.html">Codigo</a>&amp; codigo);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    list&lt;Projeto&gt; <a class="code hl_function" href="class_cntr_l_n_projeto.html#afaf48618bb32179d65e3d38f3c4eceb2">listar</a>();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    list&lt;Projeto&gt; <a class="code hl_function" href="class_cntr_l_n_projeto.html#af4f7fb631ce493c0cb09db431569e653">listarPorPessoa</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_email.html">Email</a>&amp; email);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>};</div>
+</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span></div>
+<div class="foldopen" id="foldopen00076" data-start="{" data-end="};">
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="class_cntr_l_n_plano_sprint.html">   76</a></span><span class="keyword">class </span><a class="code hl_function" href="class_cntr_l_n_plano_sprint.html#a33cdf3a0d2bc4443da75afd15cd95821">CntrLNPlanoSprint</a> : <span class="keyword">public</span> <a class="code hl_interface" href="class_i_l_n_plano_sprint.html">ILNPlanoSprint</a> {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <a class="code hl_class" href="class_container_plano_sprint.html">ContainerPlanoSprint</a> container;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <a class="code hl_interface" href="class_i_l_n_projeto.html">ILNProjeto</a>* cntrLNProjeto;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    map&lt;string, string&gt; planoDeProjeto; </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="class_cntr_l_n_plano_sprint.html#a33cdf3a0d2bc4443da75afd15cd95821">   82</a></span>    <a class="code hl_function" href="class_cntr_l_n_plano_sprint.html#a33cdf3a0d2bc4443da75afd15cd95821">CntrLNPlanoSprint</a>() : cntrLNProjeto(0) {}</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="class_cntr_l_n_plano_sprint.html#ab488595a257e84b71ca75539c225548d">   83</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_l_n_plano_sprint.html#ab488595a257e84b71ca75539c225548d">setCntrLNProjeto</a>(<a class="code hl_interface" href="class_i_l_n_projeto.html">ILNProjeto</a>* cntr) { cntrLNProjeto = cntr; }</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_cntr_l_n_plano_sprint.html#a16a0930f3b2631e90bee362eff8c65eb">criar</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_plano_sprint.html">PlanoSprint</a>&amp; plano, <span class="keyword">const</span> <a class="code hl_class" href="class_codigo.html">Codigo</a>&amp; projeto);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_cntr_l_n_plano_sprint.html#aefb528f51bd72dce2d8ef41770331980">ler</a>(<a class="code hl_class" href="class_plano_sprint.html">PlanoSprint</a>* plano);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_cntr_l_n_plano_sprint.html#aa89309fcff8e815b562a1eb76e26598c">atualizar</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_plano_sprint.html">PlanoSprint</a>&amp; plano);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_cntr_l_n_plano_sprint.html#a230b93714a817b648cef27a79db650b5">excluir</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_codigo.html">Codigo</a>&amp; codigo);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    list&lt;PlanoSprint&gt; <a class="code hl_function" href="class_cntr_l_n_plano_sprint.html#ad11df1f8a1f3e7f2cfd08ca86b1d2ced">listar</a>();</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    list&lt;PlanoSprint&gt; <a class="code hl_function" href="class_cntr_l_n_plano_sprint.html#a690e8c3431d7d33975f07b586769fda5">listarPorProjeto</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_codigo.html">Codigo</a>&amp; projeto);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_cntr_l_n_plano_sprint.html#a9e397c0bbf01b3b21436930edf873e29">projetoDoPlano</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; codigoPlano);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>};</div>
+</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span></div>
+<div class="foldopen" id="foldopen00104" data-start="{" data-end="};">
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="class_cntr_l_n_historia_usuario.html">  104</a></span><span class="keyword">class </span><a class="code hl_function" href="class_cntr_l_n_historia_usuario.html#a4b7261e3efd46efa51b7a40f6bef7643">CntrLNHistoriaUsuario</a> : <span class="keyword">public</span> <a class="code hl_interface" href="class_i_l_n_historia_usuario.html">ILNHistoriaUsuario</a> {</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <a class="code hl_class" href="class_container_historia_usuario.html">ContainerHistoriaUsuario</a> container;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <a class="code hl_interface" href="class_i_l_n_projeto.html">ILNProjeto</a>* cntrLNProjeto;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <a class="code hl_interface" href="class_i_l_n_plano_sprint.html">ILNPlanoSprint</a>* cntrLNPlanoSprint;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <a class="code hl_interface" href="class_i_l_n_pessoa.html">ILNPessoa</a>* cntrLNPessoa;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <a class="code hl_class" href="class_cntr_l_n_plano_sprint.html">CntrLNPlanoSprint</a>* cntrLNPlanoSprintConcreto; </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    map&lt;string, string&gt; historiaDeProjeto; </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    map&lt;string, string&gt; historiaDeSprint;  </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    multimap&lt;string, string&gt; historiaPessoa; </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="class_cntr_l_n_historia_usuario.html#a4b7261e3efd46efa51b7a40f6bef7643">  115</a></span>    <a class="code hl_function" href="class_cntr_l_n_historia_usuario.html#a4b7261e3efd46efa51b7a40f6bef7643">CntrLNHistoriaUsuario</a>() : cntrLNProjeto(0), cntrLNPlanoSprint(0), cntrLNPessoa(0), cntrLNPlanoSprintConcreto(0) {}</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="class_cntr_l_n_historia_usuario.html#a224be491843cbbda1a2a3efe57648235">  116</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_l_n_historia_usuario.html#a224be491843cbbda1a2a3efe57648235">setCntrLNProjeto</a>(<a class="code hl_interface" href="class_i_l_n_projeto.html">ILNProjeto</a>* cntr) { cntrLNProjeto = cntr; }</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="class_cntr_l_n_historia_usuario.html#a407846d79c4afcb8f770f04443d86eb9">  117</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_l_n_historia_usuario.html#a407846d79c4afcb8f770f04443d86eb9">setCntrLNPessoa</a>(<a class="code hl_interface" href="class_i_l_n_pessoa.html">ILNPessoa</a>* cntr) { cntrLNPessoa = cntr; }</div>
+<div class="foldopen" id="foldopen00118" data-start="{" data-end="}">
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="class_cntr_l_n_historia_usuario.html#afa811388b219f368aa8e385eef3995fb">  118</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_l_n_historia_usuario.html#afa811388b219f368aa8e385eef3995fb">setCntrLNPlanoSprint</a>(<a class="code hl_class" href="class_cntr_l_n_plano_sprint.html">CntrLNPlanoSprint</a>* cntr) {</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        cntrLNPlanoSprint = cntr;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        cntrLNPlanoSprintConcreto = cntr;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    }</div>
+</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_cntr_l_n_historia_usuario.html#a72dc0314671d96fadc209e33c2a0571e">criar</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_historia_usuario.html">HistoriaUsuario</a>&amp; historia, <span class="keyword">const</span> <a class="code hl_class" href="class_codigo.html">Codigo</a>&amp; projeto);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_cntr_l_n_historia_usuario.html#a7cd743c499156bce17af63f515ee201c">ler</a>(<a class="code hl_class" href="class_historia_usuario.html">HistoriaUsuario</a>* historia);</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_cntr_l_n_historia_usuario.html#ad0333496beffd0f840cd317b036b4c42">atualizar</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_historia_usuario.html">HistoriaUsuario</a>&amp; historia);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_cntr_l_n_historia_usuario.html#acb06b86635c6166da526d580fba5f2eb">excluir</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_codigo.html">Codigo</a>&amp; codigo);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    list&lt;HistoriaUsuario&gt; <a class="code hl_function" href="class_cntr_l_n_historia_usuario.html#afdb768d421975159da1927328056b6c3">listar</a>();</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    list&lt;HistoriaUsuario&gt; <a class="code hl_function" href="class_cntr_l_n_historia_usuario.html#ac736124f90c6f74aee117b5c02f3e2cd">listarPorProjeto</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_codigo.html">Codigo</a>&amp; projeto);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    list&lt;HistoriaUsuario&gt; <a class="code hl_function" href="class_cntr_l_n_historia_usuario.html#a0cca6cb5930c2526713aee6866adb437">listarPorPlanoSprint</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_codigo.html">Codigo</a>&amp; plano);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_cntr_l_n_historia_usuario.html#a62b57d953e0fde35babf0236932eadb9">alterarEstado</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_codigo.html">Codigo</a>&amp; historia, <span class="keyword">const</span> <a class="code hl_class" href="class_estado.html">Estado</a>&amp; novoEstado);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_cntr_l_n_historia_usuario.html#aca6c90beb7c548758585d8ad7d5b0561">moverParaSprint</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_codigo.html">Codigo</a>&amp; historia, <span class="keyword">const</span> <a class="code hl_class" href="class_codigo.html">Codigo</a>&amp; plano);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_cntr_l_n_historia_usuario.html#a4f14d79a5afd904ae896936ae3b4085f">associarPessoa</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_codigo.html">Codigo</a>&amp; historia, <span class="keyword">const</span> <a class="code hl_class" href="class_email.html">Email</a>&amp; pessoa);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_cntr_l_n_historia_usuario.html#a9ee88713e9fc5a52e43058aed974166d">desassociarPessoa</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_codigo.html">Codigo</a>&amp; historia, <span class="keyword">const</span> <a class="code hl_class" href="class_email.html">Email</a>&amp; pessoa);</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    list&lt;HistoriaUsuario&gt; <a class="code hl_function" href="class_cntr_l_n_historia_usuario.html#a37635c89e6f4fe03b50485f3fc9449c6">listarPorPessoa</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_email.html">Email</a>&amp; pessoa);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>};</div>
+</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="preprocessor">#endif </span><span class="comment">// CONTROLADORAS_SERVICO_HPP_INCLUDED</span></div>
+<div class="ttc" id="aclass_cntr_l_n_historia_usuario_html_a0cca6cb5930c2526713aee6866adb437"><div class="ttname"><a href="class_cntr_l_n_historia_usuario.html#a0cca6cb5930c2526713aee6866adb437">CntrLNHistoriaUsuario::listarPorPlanoSprint</a></div><div class="ttdeci">list&lt; HistoriaUsuario &gt; listarPorPlanoSprint(const Codigo &amp;plano)</div><div class="ttdoc">Lista as historias de usuario associadas a um plano de sprint.</div><div class="ttdef"><b>Definição</b> controladoras_servico.cpp:249</div></div>
+<div class="ttc" id="aclass_cntr_l_n_historia_usuario_html_a224be491843cbbda1a2a3efe57648235"><div class="ttname"><a href="class_cntr_l_n_historia_usuario.html#a224be491843cbbda1a2a3efe57648235">CntrLNHistoriaUsuario::setCntrLNProjeto</a></div><div class="ttdeci">void setCntrLNProjeto(ILNProjeto *cntr)</div><div class="ttdef"><b>Definição</b> controladoras_servico.hpp:116</div></div>
+<div class="ttc" id="aclass_cntr_l_n_historia_usuario_html_a37635c89e6f4fe03b50485f3fc9449c6"><div class="ttname"><a href="class_cntr_l_n_historia_usuario.html#a37635c89e6f4fe03b50485f3fc9449c6">CntrLNHistoriaUsuario::listarPorPessoa</a></div><div class="ttdeci">list&lt; HistoriaUsuario &gt; listarPorPessoa(const Email &amp;pessoa)</div><div class="ttdoc">Lista as historias de usuario associadas a uma pessoa.</div><div class="ttdef"><b>Definição</b> controladoras_servico.cpp:339</div></div>
+<div class="ttc" id="aclass_cntr_l_n_historia_usuario_html_a407846d79c4afcb8f770f04443d86eb9"><div class="ttname"><a href="class_cntr_l_n_historia_usuario.html#a407846d79c4afcb8f770f04443d86eb9">CntrLNHistoriaUsuario::setCntrLNPessoa</a></div><div class="ttdeci">void setCntrLNPessoa(ILNPessoa *cntr)</div><div class="ttdef"><b>Definição</b> controladoras_servico.hpp:117</div></div>
+<div class="ttc" id="aclass_cntr_l_n_historia_usuario_html_a4b7261e3efd46efa51b7a40f6bef7643"><div class="ttname"><a href="class_cntr_l_n_historia_usuario.html#a4b7261e3efd46efa51b7a40f6bef7643">CntrLNHistoriaUsuario::CntrLNHistoriaUsuario</a></div><div class="ttdeci">CntrLNHistoriaUsuario()</div><div class="ttdef"><b>Definição</b> controladoras_servico.hpp:115</div></div>
+<div class="ttc" id="aclass_cntr_l_n_historia_usuario_html_a4f14d79a5afd904ae896936ae3b4085f"><div class="ttname"><a href="class_cntr_l_n_historia_usuario.html#a4f14d79a5afd904ae896936ae3b4085f">CntrLNHistoriaUsuario::associarPessoa</a></div><div class="ttdeci">bool associarPessoa(const Codigo &amp;historia, const Email &amp;pessoa)</div><div class="ttdoc">Estabelece associacao entre uma historia de usuario e uma pessoa.</div><div class="ttdef"><b>Definição</b> controladoras_servico.cpp:300</div></div>
+<div class="ttc" id="aclass_cntr_l_n_historia_usuario_html_a62b57d953e0fde35babf0236932eadb9"><div class="ttname"><a href="class_cntr_l_n_historia_usuario.html#a62b57d953e0fde35babf0236932eadb9">CntrLNHistoriaUsuario::alterarEstado</a></div><div class="ttdeci">bool alterarEstado(const Codigo &amp;historia, const Estado &amp;novoEstado)</div><div class="ttdoc">Altera o estado de uma historia de usuario.</div><div class="ttdef"><b>Definição</b> controladoras_servico.cpp:259</div></div>
+<div class="ttc" id="aclass_cntr_l_n_historia_usuario_html_a72dc0314671d96fadc209e33c2a0571e"><div class="ttname"><a href="class_cntr_l_n_historia_usuario.html#a72dc0314671d96fadc209e33c2a0571e">CntrLNHistoriaUsuario::criar</a></div><div class="ttdeci">bool criar(const HistoriaUsuario &amp;historia, const Codigo &amp;projeto)</div><div class="ttdoc">Cria uma historia de usuario associada a um projeto, com estado A FAZER.</div><div class="ttdef"><b>Definição</b> controladoras_servico.cpp:202</div></div>
+<div class="ttc" id="aclass_cntr_l_n_historia_usuario_html_a7cd743c499156bce17af63f515ee201c"><div class="ttname"><a href="class_cntr_l_n_historia_usuario.html#a7cd743c499156bce17af63f515ee201c">CntrLNHistoriaUsuario::ler</a></div><div class="ttdeci">bool ler(HistoriaUsuario *historia)</div><div class="ttdef"><b>Definição</b> controladoras_servico.cpp:218</div></div>
+<div class="ttc" id="aclass_cntr_l_n_historia_usuario_html_a9ee88713e9fc5a52e43058aed974166d"><div class="ttname"><a href="class_cntr_l_n_historia_usuario.html#a9ee88713e9fc5a52e43058aed974166d">CntrLNHistoriaUsuario::desassociarPessoa</a></div><div class="ttdeci">bool desassociarPessoa(const Codigo &amp;historia, const Email &amp;pessoa)</div><div class="ttdoc">Remove a associacao entre uma historia de usuario e uma pessoa.</div><div class="ttdef"><b>Definição</b> controladoras_servico.cpp:327</div></div>
+<div class="ttc" id="aclass_cntr_l_n_historia_usuario_html_ac736124f90c6f74aee117b5c02f3e2cd"><div class="ttname"><a href="class_cntr_l_n_historia_usuario.html#ac736124f90c6f74aee117b5c02f3e2cd">CntrLNHistoriaUsuario::listarPorProjeto</a></div><div class="ttdeci">list&lt; HistoriaUsuario &gt; listarPorProjeto(const Codigo &amp;projeto)</div><div class="ttdoc">Lista as historias de usuario associadas a um projeto.</div><div class="ttdef"><b>Definição</b> controladoras_servico.cpp:239</div></div>
+<div class="ttc" id="aclass_cntr_l_n_historia_usuario_html_aca6c90beb7c548758585d8ad7d5b0561"><div class="ttname"><a href="class_cntr_l_n_historia_usuario.html#aca6c90beb7c548758585d8ad7d5b0561">CntrLNHistoriaUsuario::moverParaSprint</a></div><div class="ttdeci">bool moverParaSprint(const Codigo &amp;historia, const Codigo &amp;plano)</div><div class="ttdoc">Move uma historia de usuario de um projeto para um plano de sprint.</div><div class="ttdef"><b>Definição</b> controladoras_servico.cpp:268</div></div>
+<div class="ttc" id="aclass_cntr_l_n_historia_usuario_html_acb06b86635c6166da526d580fba5f2eb"><div class="ttname"><a href="class_cntr_l_n_historia_usuario.html#acb06b86635c6166da526d580fba5f2eb">CntrLNHistoriaUsuario::excluir</a></div><div class="ttdeci">bool excluir(const Codigo &amp;codigo)</div><div class="ttdef"><b>Definição</b> controladoras_servico.cpp:226</div></div>
+<div class="ttc" id="aclass_cntr_l_n_historia_usuario_html_ad0333496beffd0f840cd317b036b4c42"><div class="ttname"><a href="class_cntr_l_n_historia_usuario.html#ad0333496beffd0f840cd317b036b4c42">CntrLNHistoriaUsuario::atualizar</a></div><div class="ttdeci">bool atualizar(const HistoriaUsuario &amp;historia)</div><div class="ttdef"><b>Definição</b> controladoras_servico.cpp:222</div></div>
+<div class="ttc" id="aclass_cntr_l_n_historia_usuario_html_afa811388b219f368aa8e385eef3995fb"><div class="ttname"><a href="class_cntr_l_n_historia_usuario.html#afa811388b219f368aa8e385eef3995fb">CntrLNHistoriaUsuario::setCntrLNPlanoSprint</a></div><div class="ttdeci">void setCntrLNPlanoSprint(CntrLNPlanoSprint *cntr)</div><div class="ttdef"><b>Definição</b> controladoras_servico.hpp:118</div></div>
+<div class="ttc" id="aclass_cntr_l_n_historia_usuario_html_afdb768d421975159da1927328056b6c3"><div class="ttname"><a href="class_cntr_l_n_historia_usuario.html#afdb768d421975159da1927328056b6c3">CntrLNHistoriaUsuario::listar</a></div><div class="ttdeci">list&lt; HistoriaUsuario &gt; listar()</div><div class="ttdef"><b>Definição</b> controladoras_servico.cpp:235</div></div>
+<div class="ttc" id="aclass_cntr_l_n_pessoa_html"><div class="ttname"><a href="class_cntr_l_n_pessoa.html">CntrLNPessoa</a></div><div class="ttdoc">Controladora de logica de negocio das pessoas e da autenticacao.</div><div class="ttdef"><b>Definição</b> controladoras_servico.hpp:29</div></div>
+<div class="ttc" id="aclass_cntr_l_n_pessoa_html_a01ef2c602294cc656cf5c41fb8592fde"><div class="ttname"><a href="class_cntr_l_n_pessoa.html#a01ef2c602294cc656cf5c41fb8592fde">CntrLNPessoa::excluir</a></div><div class="ttdeci">bool excluir(const Email &amp;email)</div><div class="ttdoc">Exclui a pessoa identificada pelo email.</div><div class="ttdef"><b>Definição</b> controladoras_servico.cpp:54</div></div>
+<div class="ttc" id="aclass_cntr_l_n_pessoa_html_a3822525502d0dbdc97d7cd2c39c699b9"><div class="ttname"><a href="class_cntr_l_n_pessoa.html#a3822525502d0dbdc97d7cd2c39c699b9">CntrLNPessoa::autenticar</a></div><div class="ttdeci">bool autenticar(const Email &amp;email, const Senha &amp;senha)</div><div class="ttdoc">Verifica se existe uma pessoa cadastrada com o email e a senha informados.</div><div class="ttdef"><b>Definição</b> controladoras_servico.cpp:62</div></div>
+<div class="ttc" id="aclass_cntr_l_n_pessoa_html_a383b8121975bc6273afd563b3729c70f"><div class="ttname"><a href="class_cntr_l_n_pessoa.html#a383b8121975bc6273afd563b3729c70f">CntrLNPessoa::listar</a></div><div class="ttdeci">list&lt; Pessoa &gt; listar()</div><div class="ttdoc">Retorna a lista de todas as pessoas cadastradas.</div><div class="ttdef"><b>Definição</b> controladoras_servico.cpp:58</div></div>
+<div class="ttc" id="aclass_cntr_l_n_pessoa_html_aab0b0bd80c78b665a38e036550a75b2d"><div class="ttname"><a href="class_cntr_l_n_pessoa.html#aab0b0bd80c78b665a38e036550a75b2d">CntrLNPessoa::ler</a></div><div class="ttdeci">bool ler(Pessoa *pessoa)</div><div class="ttdoc">Le os dados da pessoa cujo email esta preenchido em *pessoa.</div><div class="ttdef"><b>Definição</b> controladoras_servico.cpp:46</div></div>
+<div class="ttc" id="aclass_cntr_l_n_pessoa_html_afd2490bd12ef044cdd2fec3a00b7d235"><div class="ttname"><a href="class_cntr_l_n_pessoa.html#afd2490bd12ef044cdd2fec3a00b7d235">CntrLNPessoa::criar</a></div><div class="ttdeci">bool criar(const Pessoa &amp;pessoa)</div><div class="ttdoc">Cria (cadastra) uma nova pessoa.</div><div class="ttdef"><b>Definição</b> controladoras_servico.cpp:42</div></div>
+<div class="ttc" id="aclass_cntr_l_n_pessoa_html_afd5f00a8d7200cb5d5f6931e106b54bd"><div class="ttname"><a href="class_cntr_l_n_pessoa.html#afd5f00a8d7200cb5d5f6931e106b54bd">CntrLNPessoa::atualizar</a></div><div class="ttdeci">bool atualizar(const Pessoa &amp;pessoa)</div><div class="ttdoc">Atualiza os dados da pessoa (a chave email nao e alterada).</div><div class="ttdef"><b>Definição</b> controladoras_servico.cpp:50</div></div>
+<div class="ttc" id="aclass_cntr_l_n_plano_sprint_html"><div class="ttname"><a href="class_cntr_l_n_plano_sprint.html">CntrLNPlanoSprint</a></div><div class="ttdoc">Controladora de logica de negocio dos planos de sprint.</div><div class="ttdef"><b>Definição</b> controladoras_servico.hpp:76</div></div>
+<div class="ttc" id="aclass_cntr_l_n_plano_sprint_html_a16a0930f3b2631e90bee362eff8c65eb"><div class="ttname"><a href="class_cntr_l_n_plano_sprint.html#a16a0930f3b2631e90bee362eff8c65eb">CntrLNPlanoSprint::criar</a></div><div class="ttdeci">bool criar(const PlanoSprint &amp;plano, const Codigo &amp;projeto)</div><div class="ttdoc">Cria um plano de sprint associado a um projeto.</div><div class="ttdef"><b>Definição</b> controladoras_servico.cpp:135</div></div>
+<div class="ttc" id="aclass_cntr_l_n_plano_sprint_html_a230b93714a817b648cef27a79db650b5"><div class="ttname"><a href="class_cntr_l_n_plano_sprint.html#a230b93714a817b648cef27a79db650b5">CntrLNPlanoSprint::excluir</a></div><div class="ttdeci">bool excluir(const Codigo &amp;codigo)</div><div class="ttdef"><b>Definição</b> controladoras_servico.cpp:170</div></div>
+<div class="ttc" id="aclass_cntr_l_n_plano_sprint_html_a33cdf3a0d2bc4443da75afd15cd95821"><div class="ttname"><a href="class_cntr_l_n_plano_sprint.html#a33cdf3a0d2bc4443da75afd15cd95821">CntrLNPlanoSprint::CntrLNPlanoSprint</a></div><div class="ttdeci">CntrLNPlanoSprint()</div><div class="ttdef"><b>Definição</b> controladoras_servico.hpp:82</div></div>
+<div class="ttc" id="aclass_cntr_l_n_plano_sprint_html_a690e8c3431d7d33975f07b586769fda5"><div class="ttname"><a href="class_cntr_l_n_plano_sprint.html#a690e8c3431d7d33975f07b586769fda5">CntrLNPlanoSprint::listarPorProjeto</a></div><div class="ttdeci">list&lt; PlanoSprint &gt; listarPorProjeto(const Codigo &amp;projeto)</div><div class="ttdoc">Lista os planos de sprint associados a um projeto.</div><div class="ttdef"><b>Definição</b> controladoras_servico.cpp:181</div></div>
+<div class="ttc" id="aclass_cntr_l_n_plano_sprint_html_a9e397c0bbf01b3b21436930edf873e29"><div class="ttname"><a href="class_cntr_l_n_plano_sprint.html#a9e397c0bbf01b3b21436930edf873e29">CntrLNPlanoSprint::projetoDoPlano</a></div><div class="ttdeci">string projetoDoPlano(const string &amp;codigoPlano)</div><div class="ttdoc">Retorna o codigo do projeto ao qual o plano esta associado (string vazia se nao houver).</div><div class="ttdef"><b>Definição</b> controladoras_servico.cpp:191</div></div>
+<div class="ttc" id="aclass_cntr_l_n_plano_sprint_html_aa89309fcff8e815b562a1eb76e26598c"><div class="ttname"><a href="class_cntr_l_n_plano_sprint.html#aa89309fcff8e815b562a1eb76e26598c">CntrLNPlanoSprint::atualizar</a></div><div class="ttdeci">bool atualizar(const PlanoSprint &amp;plano)</div><div class="ttdef"><b>Definição</b> controladoras_servico.cpp:166</div></div>
+<div class="ttc" id="aclass_cntr_l_n_plano_sprint_html_ab488595a257e84b71ca75539c225548d"><div class="ttname"><a href="class_cntr_l_n_plano_sprint.html#ab488595a257e84b71ca75539c225548d">CntrLNPlanoSprint::setCntrLNProjeto</a></div><div class="ttdeci">void setCntrLNProjeto(ILNProjeto *cntr)</div><div class="ttdef"><b>Definição</b> controladoras_servico.hpp:83</div></div>
+<div class="ttc" id="aclass_cntr_l_n_plano_sprint_html_ad11df1f8a1f3e7f2cfd08ca86b1d2ced"><div class="ttname"><a href="class_cntr_l_n_plano_sprint.html#ad11df1f8a1f3e7f2cfd08ca86b1d2ced">CntrLNPlanoSprint::listar</a></div><div class="ttdeci">list&lt; PlanoSprint &gt; listar()</div><div class="ttdef"><b>Definição</b> controladoras_servico.cpp:177</div></div>
+<div class="ttc" id="aclass_cntr_l_n_plano_sprint_html_aefb528f51bd72dce2d8ef41770331980"><div class="ttname"><a href="class_cntr_l_n_plano_sprint.html#aefb528f51bd72dce2d8ef41770331980">CntrLNPlanoSprint::ler</a></div><div class="ttdeci">bool ler(PlanoSprint *plano)</div><div class="ttdef"><b>Definição</b> controladoras_servico.cpp:162</div></div>
+<div class="ttc" id="aclass_cntr_l_n_projeto_html_a1e9dc98489f56c3ca02f541c9bb91585"><div class="ttname"><a href="class_cntr_l_n_projeto.html#a1e9dc98489f56c3ca02f541c9bb91585">CntrLNProjeto::excluir</a></div><div class="ttdeci">bool excluir(const Codigo &amp;codigo)</div><div class="ttdef"><b>Definição</b> controladoras_servico.cpp:107</div></div>
+<div class="ttc" id="aclass_cntr_l_n_projeto_html_a585c11cc004f340149c9d0a3a3293819"><div class="ttname"><a href="class_cntr_l_n_projeto.html#a585c11cc004f340149c9d0a3a3293819">CntrLNProjeto::ler</a></div><div class="ttdeci">bool ler(Projeto *projeto)</div><div class="ttdef"><b>Definição</b> controladoras_servico.cpp:99</div></div>
+<div class="ttc" id="aclass_cntr_l_n_projeto_html_a5ef15f44a477378aa3c57ae06c157ea5"><div class="ttname"><a href="class_cntr_l_n_projeto.html#a5ef15f44a477378aa3c57ae06c157ea5">CntrLNProjeto::atualizar</a></div><div class="ttdeci">bool atualizar(const Projeto &amp;projeto)</div><div class="ttdef"><b>Definição</b> controladoras_servico.cpp:103</div></div>
+<div class="ttc" id="aclass_cntr_l_n_projeto_html_a6f2be086d1441f92bc0a29a325702142"><div class="ttname"><a href="class_cntr_l_n_projeto.html#a6f2be086d1441f92bc0a29a325702142">CntrLNProjeto::setCntrLNPessoa</a></div><div class="ttdeci">void setCntrLNPessoa(ILNPessoa *cntr)</div><div class="ttdef"><b>Definição</b> controladoras_servico.hpp:58</div></div>
+<div class="ttc" id="aclass_cntr_l_n_projeto_html_a9533335b88a65541b77a418384c5b9f5"><div class="ttname"><a href="class_cntr_l_n_projeto.html#a9533335b88a65541b77a418384c5b9f5">CntrLNProjeto::criar</a></div><div class="ttdeci">bool criar(const Projeto &amp;projeto, const Email &amp;proprietario, const Email &amp;mestreScrum)</div><div class="ttdoc">Cria um projeto associado a um proprietario e a um mestre scrum.</div><div class="ttdef"><b>Definição</b> controladoras_servico.cpp:74</div></div>
+<div class="ttc" id="aclass_cntr_l_n_projeto_html_ae0b4518e1c1aa3c75b47cdda142c881d"><div class="ttname"><a href="class_cntr_l_n_projeto.html#ae0b4518e1c1aa3c75b47cdda142c881d">CntrLNProjeto::CntrLNProjeto</a></div><div class="ttdeci">CntrLNProjeto()</div><div class="ttdef"><b>Definição</b> controladoras_servico.hpp:57</div></div>
+<div class="ttc" id="aclass_cntr_l_n_projeto_html_af4f7fb631ce493c0cb09db431569e653"><div class="ttname"><a href="class_cntr_l_n_projeto.html#af4f7fb631ce493c0cb09db431569e653">CntrLNProjeto::listarPorPessoa</a></div><div class="ttdeci">list&lt; Projeto &gt; listarPorPessoa(const Email &amp;email)</div><div class="ttdoc">Lista os projetos associados a uma pessoa (proprietario, mestre ou desenvolvedor).</div><div class="ttdef"><b>Definição</b> controladoras_servico.cpp:119</div></div>
+<div class="ttc" id="aclass_cntr_l_n_projeto_html_afaf48618bb32179d65e3d38f3c4eceb2"><div class="ttname"><a href="class_cntr_l_n_projeto.html#afaf48618bb32179d65e3d38f3c4eceb2">CntrLNProjeto::listar</a></div><div class="ttdeci">list&lt; Projeto &gt; listar()</div><div class="ttdef"><b>Definição</b> controladoras_servico.cpp:115</div></div>
+<div class="ttc" id="aclass_codigo_html"><div class="ttname"><a href="class_codigo.html">Codigo</a></div><div class="ttdef"><b>Definição</b> codigo.hpp:8</div></div>
+<div class="ttc" id="aclass_container_historia_usuario_html"><div class="ttname"><a href="class_container_historia_usuario.html">ContainerHistoriaUsuario</a></div><div class="ttdoc">Armazena objetos HistoriaUsuario identificados pelo codigo.</div><div class="ttdef"><b>Definição</b> containers.hpp:76</div></div>
+<div class="ttc" id="aclass_container_pessoa_html"><div class="ttname"><a href="class_container_pessoa.html">ContainerPessoa</a></div><div class="ttdoc">Armazena objetos Pessoa identificados pelo email.</div><div class="ttdef"><b>Definição</b> containers.hpp:26</div></div>
+<div class="ttc" id="aclass_container_plano_sprint_html"><div class="ttname"><a href="class_container_plano_sprint.html">ContainerPlanoSprint</a></div><div class="ttdoc">Armazena objetos PlanoSprint identificados pelo codigo.</div><div class="ttdef"><b>Definição</b> containers.hpp:61</div></div>
+<div class="ttc" id="aclass_container_projeto_html"><div class="ttname"><a href="class_container_projeto.html">ContainerProjeto</a></div><div class="ttdoc">Armazena objetos Projeto identificados pelo codigo.</div><div class="ttdef"><b>Definição</b> containers.hpp:46</div></div>
+<div class="ttc" id="aclass_email_html"><div class="ttname"><a href="class_email.html">Email</a></div><div class="ttdef"><b>Definição</b> email.hpp:6</div></div>
+<div class="ttc" id="aclass_estado_html"><div class="ttname"><a href="class_estado.html">Estado</a></div><div class="ttdef"><b>Definição</b> estado.hpp:6</div></div>
+<div class="ttc" id="aclass_historia_usuario_html"><div class="ttname"><a href="class_historia_usuario.html">HistoriaUsuario</a></div><div class="ttdef"><b>Definição</b> historia_usuario.hpp:10</div></div>
+<div class="ttc" id="aclass_i_l_n_autenticacao_html"><div class="ttname"><a href="class_i_l_n_autenticacao.html">ILNAutenticacao</a></div><div class="ttdoc">Servico de autenticacao provido pela camada de logica de negocio.</div><div class="ttdef"><b>Definição</b> interfaces.hpp:33</div></div>
+<div class="ttc" id="aclass_i_l_n_historia_usuario_html"><div class="ttname"><a href="class_i_l_n_historia_usuario.html">ILNHistoriaUsuario</a></div><div class="ttdoc">Servicos de manutencao de historias de usuario providos pela camada de negocio.</div><div class="ttdef"><b>Definição</b> interfaces.hpp:181</div></div>
+<div class="ttc" id="aclass_i_l_n_pessoa_html"><div class="ttname"><a href="class_i_l_n_pessoa.html">ILNPessoa</a></div><div class="ttdoc">Servicos de manutencao de pessoas providos pela camada de negocio.</div><div class="ttdef"><b>Definição</b> interfaces.hpp:73</div></div>
+<div class="ttc" id="aclass_i_l_n_plano_sprint_html"><div class="ttname"><a href="class_i_l_n_plano_sprint.html">ILNPlanoSprint</a></div><div class="ttdoc">Servicos de manutencao de planos de sprint providos pela camada de negocio.</div><div class="ttdef"><b>Definição</b> interfaces.hpp:145</div></div>
+<div class="ttc" id="aclass_i_l_n_projeto_html"><div class="ttname"><a href="class_i_l_n_projeto.html">ILNProjeto</a></div><div class="ttdoc">Servicos de manutencao de projetos providos pela camada de negocio.</div><div class="ttdef"><b>Definição</b> interfaces.hpp:110</div></div>
+<div class="ttc" id="aclass_pessoa_html"><div class="ttname"><a href="class_pessoa.html">Pessoa</a></div><div class="ttdoc">Entidade que representa um usuario do sistema.</div><div class="ttdef"><b>Definição</b> Pessoa.hpp:20</div></div>
+<div class="ttc" id="aclass_plano_sprint_html"><div class="ttname"><a href="class_plano_sprint.html">PlanoSprint</a></div><div class="ttdef"><b>Definição</b> Plano_Sprint.hpp:8</div></div>
+<div class="ttc" id="aclass_projeto_html"><div class="ttname"><a href="class_projeto.html">Projeto</a></div><div class="ttdef"><b>Definição</b> Projeto.hpp:8</div></div>
+<div class="ttc" id="aclass_senha_html"><div class="ttname"><a href="class_senha.html">Senha</a></div><div class="ttdef"><b>Definição</b> senha.hpp:6</div></div>
+<div class="ttc" id="acontainers_8hpp_html"><div class="ttname"><a href="containers_8hpp.html">containers.hpp</a></div><div class="ttdoc">Conteineres da camada de servico responsaveis por armazenar as entidades em memoria usando o template...</div></div>
+<div class="ttc" id="ainterfaces_8hpp_html"><div class="ttname"><a href="interfaces_8hpp.html">interfaces.hpp</a></div><div class="ttdoc">Declaracao das interfaces que separam a camada de apresentacao da camada de servico.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="controladoras__servico_8hpp.html">controladoras_servico.hpp</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

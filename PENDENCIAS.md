@@ -36,6 +36,9 @@
 - OK: soma das capacidades dos planos ≤ dias entre início e término do projeto.
 - OK: soma das estimativas das histórias do sprint ≤ capacidade do plano (ao mover).
 - OK: ao criar projeto, exige proprietário com papel PROPRIETARIO DE PRODUTO e mestre MESTRE SCRUM.
+- OK: **controle de acesso por papel** (tabela ID SERVIÇO / PAPÉIS da especificação) — cada
+  serviço restrito verifica o papel de quem o invoca na camada de serviço e lança "Acesso negado"
+  se não autorizado (ex.: só Proprietário cria projeto/história; só Mestre Scrum cria sprint).
 - OK: ao criar história, estado é forçado para A FAZER.
 - OK: não é possível editar chave primária (email/código) — atualização só altera demais campos.
 - PARCIAL: integridade referencial em exclusões (ex.: excluir projeto com planos/histórias

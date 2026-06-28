@@ -57,10 +57,10 @@ public:
     CntrLNProjeto() : cntrLNPessoa(0) {}
     void setCntrLNPessoa(ILNPessoa* cntr) { cntrLNPessoa = cntr; }
 
-    bool criar(const Projeto& projeto, const Email& proprietario, const Email& mestreScrum);
+    bool criar(const Projeto& projeto, const Email& proprietario, const Email& mestreScrum, const Papel& solicitante);
     bool ler(Projeto* projeto);
-    bool atualizar(const Projeto& projeto);
-    bool excluir(const Codigo& codigo);
+    bool atualizar(const Projeto& projeto, const Papel& solicitante);
+    bool excluir(const Codigo& codigo, const Papel& solicitante);
     list<Projeto> listar();
     list<Projeto> listarPorPessoa(const Email& email);
 };
@@ -82,10 +82,10 @@ public:
     CntrLNPlanoSprint() : cntrLNProjeto(0) {}
     void setCntrLNProjeto(ILNProjeto* cntr) { cntrLNProjeto = cntr; }
 
-    bool criar(const PlanoSprint& plano, const Codigo& projeto);
+    bool criar(const PlanoSprint& plano, const Codigo& projeto, const Papel& solicitante);
     bool ler(PlanoSprint* plano);
-    bool atualizar(const PlanoSprint& plano);
-    bool excluir(const Codigo& codigo);
+    bool atualizar(const PlanoSprint& plano, const Papel& solicitante);
+    bool excluir(const Codigo& codigo, const Papel& solicitante);
     list<PlanoSprint> listar();
     list<PlanoSprint> listarPorProjeto(const Codigo& projeto);
 
@@ -120,17 +120,17 @@ public:
         cntrLNPlanoSprintConcreto = cntr;
     }
 
-    bool criar(const HistoriaUsuario& historia, const Codigo& projeto);
+    bool criar(const HistoriaUsuario& historia, const Codigo& projeto, const Papel& solicitante);
     bool ler(HistoriaUsuario* historia);
-    bool atualizar(const HistoriaUsuario& historia);
-    bool excluir(const Codigo& codigo);
+    bool atualizar(const HistoriaUsuario& historia, const Papel& solicitante);
+    bool excluir(const Codigo& codigo, const Papel& solicitante);
     list<HistoriaUsuario> listar();
     list<HistoriaUsuario> listarPorProjeto(const Codigo& projeto);
     list<HistoriaUsuario> listarPorPlanoSprint(const Codigo& plano);
-    bool alterarEstado(const Codigo& historia, const Estado& novoEstado);
-    bool moverParaSprint(const Codigo& historia, const Codigo& plano);
-    bool associarPessoa(const Codigo& historia, const Email& pessoa);
-    bool desassociarPessoa(const Codigo& historia, const Email& pessoa);
+    bool alterarEstado(const Codigo& historia, const Estado& novoEstado, const Papel& solicitante);
+    bool moverParaSprint(const Codigo& historia, const Codigo& plano, const Papel& solicitante);
+    bool associarPessoa(const Codigo& historia, const Email& pessoa, const Papel& solicitante);
+    bool desassociarPessoa(const Codigo& historia, const Email& pessoa, const Papel& solicitante);
     list<HistoriaUsuario> listarPorPessoa(const Email& pessoa);
 };
 

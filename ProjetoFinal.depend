@@ -614,3 +614,193 @@
 	"../dominios/nome.hpp"
 	"../dominios/data.hpp"
 
+1782662374 source:c:\users\clero\downloads\trabalhotp1-completo\containers.cpp
+	"containers.hpp"
+
+1782662353 c:\users\clero\downloads\trabalhotp1-completo\containers.hpp
+	<list>
+	"entidades/Pessoa.hpp"
+	"entidades/Projeto.hpp"
+	"entidades/Plano_Sprint.hpp"
+	"entidades/historia_usuario.hpp"
+
+1782662139 c:\users\clero\downloads\trabalhotp1-completo\entidades\pessoa.hpp
+	"../dominios/email.hpp"
+	"../dominios/nome.hpp"
+	"../dominios/senha.hpp"
+	"../dominios/papel.hpp"
+
+1782662139 c:\users\clero\downloads\trabalhotp1-completo\dominios\email.hpp
+	"template_dominios.hpp"
+
+1782662139 c:\users\clero\downloads\trabalhotp1-completo\dominios\template_dominios.hpp
+	<stdexcept>
+	<string>
+
+1782662139 c:\users\clero\downloads\trabalhotp1-completo\dominios\nome.hpp
+	"template_dominios.hpp"
+
+1782662139 c:\users\clero\downloads\trabalhotp1-completo\dominios\senha.hpp
+	"template_dominios.hpp"
+
+1782662139 c:\users\clero\downloads\trabalhotp1-completo\dominios\papel.hpp
+	"template_dominios.hpp"
+
+1782662139 c:\users\clero\downloads\trabalhotp1-completo\entidades\projeto.hpp
+	"../dominios/codigo.hpp"
+	"../dominios/nome.hpp"
+	"../dominios/data.hpp"
+
+1782662139 c:\users\clero\downloads\trabalhotp1-completo\dominios\codigo.hpp
+	"template_dominios.hpp"
+	<cctype>
+
+1782662139 c:\users\clero\downloads\trabalhotp1-completo\dominios\data.hpp
+	"template_dominios.hpp"
+	<string>
+
+1782662139 c:\users\clero\downloads\trabalhotp1-completo\entidades\plano_sprint.hpp
+	"../dominios/codigo.hpp"
+	"../dominios/texto.hpp"
+	"../dominios/tempo.hpp"
+
+1782662139 c:\users\clero\downloads\trabalhotp1-completo\dominios\texto.hpp
+	"template_dominios.hpp"
+
+1782662139 c:\users\clero\downloads\trabalhotp1-completo\dominios\tempo.hpp
+	"template_dominios.hpp"
+
+1782662139 c:\users\clero\downloads\trabalhotp1-completo\entidades\historia_usuario.hpp
+	"../dominios/codigo.hpp"
+	"../dominios/texto.hpp"
+	"../dominios/tempo.hpp"
+	"../dominios/prioridade.hpp"
+	"../dominios/estado.hpp"
+
+1782662139 c:\users\clero\downloads\trabalhotp1-completo\dominios\prioridade.hpp
+	"template_dominios.hpp"
+
+1782662139 c:\users\clero\downloads\trabalhotp1-completo\dominios\estado.hpp
+	"template_dominios.hpp"
+
+1782662139 source:c:\users\clero\downloads\trabalhotp1-completo\dominios\codigo.cpp
+	"codigo.hpp"
+
+1782662139 source:c:\users\clero\downloads\trabalhotp1-completo\dominios\data.cpp
+	"data.hpp"
+
+1782662139 source:c:\users\clero\downloads\trabalhotp1-completo\dominios\email.cpp
+	"email.hpp"
+
+1782662139 source:c:\users\clero\downloads\trabalhotp1-completo\dominios\estado.cpp
+	"estado.hpp"
+
+1782662139 source:c:\users\clero\downloads\trabalhotp1-completo\dominios\nome.cpp
+	"nome.hpp"
+	<cctype>
+
+1782662139 source:c:\users\clero\downloads\trabalhotp1-completo\dominios\papel.cpp
+	"papel.hpp"
+
+1782662139 source:c:\users\clero\downloads\trabalhotp1-completo\dominios\prioridade.cpp
+	"prioridade.hpp"
+
+1782662139 source:c:\users\clero\downloads\trabalhotp1-completo\dominios\senha.cpp
+	"senha.hpp"
+
+1782662139 source:c:\users\clero\downloads\trabalhotp1-completo\dominios\tempo.cpp
+	"tempo.hpp"
+
+1782662139 source:c:\users\clero\downloads\trabalhotp1-completo\dominios\texto.cpp
+	"texto.hpp"
+	<cctype>
+
+1782662139 source:c:\users\clero\downloads\trabalhotp1-completo\entidades\historia_usuario.cpp
+
+1782662139 source:c:\users\clero\downloads\trabalhotp1-completo\entidades\pessoa.cpp
+	"Pessoa.hpp"
+
+1782662139 source:c:\users\clero\downloads\trabalhotp1-completo\entidades\plano_sprint.cpp
+
+1782662139 source:c:\users\clero\downloads\trabalhotp1-completo\entidades\projeto.cpp
+
+1782662139 source:c:\users\clero\downloads\trabalhotp1-completo\testesunitarios\tuemail.cpp
+	"TUEmail.hpp"
+
+1782662139 c:\users\clero\downloads\trabalhotp1-completo\testesunitarios\tuemail.hpp
+	"TUTemplate.hpp"
+	"../dominios/email.hpp"
+
+1782662139 c:\users\clero\downloads\trabalhotp1-completo\testesunitarios\tutemplate.hpp
+	<stdexcept>
+	<vector>
+	<string>
+	<iostream>
+
+1782662139 source:c:\users\clero\downloads\trabalhotp1-completo\testesunitarios\tuhistoriausuario.cpp
+	"TUHistoriaUsuario.hpp"
+
+1782662139 c:\users\clero\downloads\trabalhotp1-completo\testesunitarios\tuhistoriausuario.hpp
+	"../entidades/historia_usuario.hpp"
+
+1782662139 source:c:\users\clero\downloads\trabalhotp1-completo\testesunitarios\tunome.cpp
+	"TUNome.hpp"
+
+1782662139 c:\users\clero\downloads\trabalhotp1-completo\testesunitarios\tunome.hpp
+	"TUTemplate.hpp"
+	"../dominios/nome.hpp"
+
+1782662139 source:c:\users\clero\downloads\trabalhotp1-completo\testesunitarios\tupapel.cpp
+	"TUPapel.hpp"
+
+1782662139 c:\users\clero\downloads\trabalhotp1-completo\testesunitarios\tupapel.hpp
+	"TUTemplate.hpp"
+	"../dominios/papel.hpp"
+
+1782662139 source:c:\users\clero\downloads\trabalhotp1-completo\testesunitarios\tupessoa.cpp
+	"TUPessoa.hpp"
+
+1782662139 c:\users\clero\downloads\trabalhotp1-completo\testesunitarios\tupessoa.hpp
+	<string>
+	"../entidades/Pessoa.hpp"
+
+1782662139 source:c:\users\clero\downloads\trabalhotp1-completo\testesunitarios\tuplanosprint.cpp
+	"TUPlanoSprint.hpp"
+
+1782662139 c:\users\clero\downloads\trabalhotp1-completo\testesunitarios\tuplanosprint.hpp
+	"../entidades/Plano_Sprint.hpp"
+
+1782662139 source:c:\users\clero\downloads\trabalhotp1-completo\testesunitarios\tuprioridade.cpp
+	"TUPrioridade.hpp"
+
+1782662139 c:\users\clero\downloads\trabalhotp1-completo\testesunitarios\tuprioridade.hpp
+	"TUTemplate.hpp"
+	"../dominios/prioridade.hpp"
+
+1782662139 source:c:\users\clero\downloads\trabalhotp1-completo\testesunitarios\tuprojeto.cpp
+	"TUProjeto.hpp"
+
+1782662139 c:\users\clero\downloads\trabalhotp1-completo\testesunitarios\tuprojeto.hpp
+	"../entidades/projeto.hpp"
+
+1782662139 source:c:\users\clero\downloads\trabalhotp1-completo\testesunitarios\tusenha.cpp
+	"TUSenha.hpp"
+
+1782662139 c:\users\clero\downloads\trabalhotp1-completo\testesunitarios\tusenha.hpp
+	"TUTemplate.hpp"
+	"../dominios/senha.hpp"
+
+1782662139 source:c:\users\clero\downloads\trabalhotp1-completo\testesunitarios\tutempo.cpp
+	"TUTempo.hpp"
+
+1782662139 c:\users\clero\downloads\trabalhotp1-completo\testesunitarios\tutempo.hpp
+	"TUTemplate.hpp"
+	"../dominios/tempo.hpp"
+
+1782662139 source:c:\users\clero\downloads\trabalhotp1-completo\testesunitarios\tutexto.cpp
+	"TUTexto.hpp"
+
+1782662139 c:\users\clero\downloads\trabalhotp1-completo\testesunitarios\tutexto.hpp
+	"TUTemplate.hpp"
+	"../dominios/texto.hpp"
+

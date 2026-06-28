@@ -37,7 +37,7 @@ private:
     ILNPessoa* cntrLNPessoa;
 public:
     CntrIUPessoa() : cntrLNPessoa(0) {}
-    void executar(const Email& usuarioLogado);
+    void executar(const Papel& papelUsuario);
     void cadastrar();
     void setCntrLNPessoa(ILNPessoa* cntr) { cntrLNPessoa = cntr; }
 };
@@ -51,7 +51,7 @@ private:
     ILNProjeto* cntrLNProjeto;
 public:
     CntrIUProjeto() : cntrLNProjeto(0) {}
-    void executar(const Email& usuarioLogado);
+    void executar(const Papel& papelUsuario);
     void setCntrLNProjeto(ILNProjeto* cntr) { cntrLNProjeto = cntr; }
 };
 
@@ -64,7 +64,7 @@ private:
     ILNPlanoSprint* cntrLNPlanoSprint;
 public:
     CntrIUPlanoSprint() : cntrLNPlanoSprint(0) {}
-    void executar(const Email& usuarioLogado);
+    void executar(const Papel& papelUsuario);
     void setCntrLNPlanoSprint(ILNPlanoSprint* cntr) { cntrLNPlanoSprint = cntr; }
 };
 
@@ -77,7 +77,7 @@ private:
     ILNHistoriaUsuario* cntrLNHistoriaUsuario;
 public:
     CntrIUHistoriaUsuario() : cntrLNHistoriaUsuario(0) {}
-    void executar(const Email& usuarioLogado);
+    void executar(const Papel& papelUsuario);
     void setCntrLNHistoriaUsuario(ILNHistoriaUsuario* cntr) { cntrLNHistoriaUsuario = cntr; }
 };
 

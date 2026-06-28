@@ -117,7 +117,7 @@ void CntrIUPessoa::cadastrar() {
                                          : "Falha: ja existe pessoa com este email.\n");
 }
 
-void CntrIUPessoa::executar(const Email&) {
+void CntrIUPessoa::executar(const Papel&) {
     int opcao;
     do {
         cout << "\n=== Pessoa ===\n"
@@ -169,7 +169,7 @@ static void apresentarProjeto(const Projeto& p) {
          << "  Termino: " << p.getTermino().getValor() << "\n";
 }
 
-void CntrIUProjeto::executar(const Email&) {
+void CntrIUProjeto::executar(const Papel& papelUsuario) {
     int opcao;
     do {
         cout << "\n=== Projeto ===\n"
@@ -188,7 +188,7 @@ void CntrIUProjeto::executar(const Email&) {
             if (!lerDominio("Email do mestre scrum: ", mestre)) return;
             projeto.setCodigo(codigo); projeto.setNome(nome);
             projeto.setInicio(inicio); projeto.setTermino(termino);
-            cout << (cntrLNProjeto->criar(projeto, proprietario, mestre)
+            cout << (cntrLNProjeto->criar(projeto, proprietario, mestre, papelUsuario)
                      ? "Projeto criado com sucesso.\n"
                      : "Falha: codigo ja existe ou pessoas/papeis invalidos.\n");
         } else if (opcao == 2) {
@@ -207,11 +207,11 @@ void CntrIUProjeto::executar(const Email&) {
             if (!lerDominio("Novo inicio (DD/MM/AAAA): ", inicio)) return;
             if (!lerDominio("Novo termino (DD/MM/AAAA): ", termino)) return;
             projeto.setNome(nome); projeto.setInicio(inicio); projeto.setTermino(termino);
-            cout << (cntrLNProjeto->atualizar(projeto) ? "Projeto atualizado.\n" : "Falha ao atualizar.\n");
+            cout << (cntrLNProjeto->atualizar(projeto, papelUsuario) ? "Projeto atualizado.\n" : "Falha ao atualizar.\n");
         } else if (opcao == 4) {
             Codigo codigo;
             if (!lerDominio("Codigo do projeto a excluir: ", codigo)) return;
-            cout << (cntrLNProjeto->excluir(codigo) ? "Projeto excluido.\n" : "Projeto nao encontrado.\n");
+            cout << (cntrLNProjeto->excluir(codigo, papelUsuario) ? "Projeto excluido.\n" : "Projeto nao encontrado.\n");
         } else if (opcao == 5) {
             list<Projeto> projetos = cntrLNProjeto->listar();
             cout << "Total: " << projetos.size() << "\n";
@@ -240,7 +240,7 @@ static void apresentarPlano(const PlanoSprint& p) {
          << "  Capacidade: " << p.getCapacidade().getValor() << "\n";
 }
 
-void CntrIUPlanoSprint::executar(const Email&) {
+void CntrIUPlanoSprint::executar(const Papel& papelUsuario) {
     int opcao;
     do {
         cout << "\n=== Plano de Sprint ===\n"
@@ -256,7 +256,7 @@ void CntrIUPlanoSprint::executar(const Email&) {
             if (!lerTempo("Capacidade (1-365): ", capacidade)) return;
             if (!lerDominio("Codigo do projeto associado: ", projeto)) return;
             plano.setCodigo(codigo); plano.setObjetivo(objetivo); plano.setCapacidade(capacidade);
-            cout << (cntrLNPlanoSprint->criar(plano, projeto)
+            cout << (cntrLNPlanoSprint->criar(plano, projeto, papelUsuario)
                      ? "Plano de sprint criado com sucesso.\n"
                      : "Falha: codigo ja existe, projeto inexistente ou capacidade excedida.\n");
         } else if (opcao == 2) {
@@ -274,11 +274,11 @@ void CntrIUPlanoSprint::executar(const Email&) {
             if (!lerDominio("Novo objetivo: ", objetivo)) return;
             if (!lerTempo("Nova capacidade (1-365): ", capacidade)) return;
             plano.setObjetivo(objetivo); plano.setCapacidade(capacidade);
-            cout << (cntrLNPlanoSprint->atualizar(plano) ? "Plano atualizado.\n" : "Falha ao atualizar.\n");
+            cout << (cntrLNPlanoSprint->atualizar(plano, papelUsuario) ? "Plano atualizado.\n" : "Falha ao atualizar.\n");
         } else if (opcao == 4) {
             Codigo codigo;
             if (!lerDominio("Codigo do plano a excluir: ", codigo)) return;
-            cout << (cntrLNPlanoSprint->excluir(codigo) ? "Plano excluido.\n" : "Plano nao encontrado.\n");
+            cout << (cntrLNPlanoSprint->excluir(codigo, papelUsuario) ? "Plano excluido.\n" : "Plano nao encontrado.\n");
         } else if (opcao == 5) {
             list<PlanoSprint> planos = cntrLNPlanoSprint->listar();
             cout << "Total: " << planos.size() << "\n";
@@ -312,7 +312,7 @@ static void apresentarHistoria(const HistoriaUsuario& h) {
          << "  Estado    : " << h.getEstado().getValor() << "\n";
 }
 
-void CntrIUHistoriaUsuario::executar(const Email&) {
+void CntrIUHistoriaUsuario::executar(const Papel& papelUsuario) {
     int opcao;
     do {
         cout << "\n=== Historia de Usuario ===\n"
@@ -339,7 +339,7 @@ void CntrIUHistoriaUsuario::executar(const Email&) {
             historia.setCodigo(codigo); historia.setTitulo(titulo); historia.setPapel(papel);
             historia.setAcao(acao); historia.setValor(valor); historia.setEstimativa(estimativa);
             historia.setPrioridade(prioridade); historia.setEstado(estado);
-            cout << (cntrLNHistoriaUsuario->criar(historia, projeto)
+            cout << (cntrLNHistoriaUsuario->criar(historia, projeto, papelUsuario)
                      ? "Historia criada com sucesso (estado: A FAZER).\n"
                      : "Falha: codigo ja existe ou projeto inexistente.\n");
         } else if (opcao == 2) {
@@ -362,11 +362,11 @@ void CntrIUHistoriaUsuario::executar(const Email&) {
             if (!lerDominio("Nova prioridade: ", prioridade)) return;
             historia.setTitulo(titulo); historia.setPapel(papel); historia.setAcao(acao);
             historia.setValor(valor); historia.setEstimativa(estimativa); historia.setPrioridade(prioridade);
-            cout << (cntrLNHistoriaUsuario->atualizar(historia) ? "Historia atualizada.\n" : "Falha ao atualizar.\n");
+            cout << (cntrLNHistoriaUsuario->atualizar(historia, papelUsuario) ? "Historia atualizada.\n" : "Falha ao atualizar.\n");
         } else if (opcao == 4) {
             Codigo codigo;
             if (!lerDominio("Codigo da historia a excluir: ", codigo)) return;
-            cout << (cntrLNHistoriaUsuario->excluir(codigo) ? "Historia excluida.\n" : "Historia nao encontrada.\n");
+            cout << (cntrLNHistoriaUsuario->excluir(codigo, papelUsuario) ? "Historia excluida.\n" : "Historia nao encontrada.\n");
         } else if (opcao == 5) {
             list<HistoriaUsuario> hs = cntrLNHistoriaUsuario->listar();
             cout << "Total: " << hs.size() << "\n";
@@ -390,27 +390,27 @@ void CntrIUHistoriaUsuario::executar(const Email&) {
             Codigo codigo; Estado estado;
             if (!lerDominio("Codigo da historia: ", codigo)) return;
             if (!lerDominio("Novo estado (A FAZER / FAZENDO / FEITO): ", estado)) return;
-            cout << (cntrLNHistoriaUsuario->alterarEstado(codigo, estado)
+            cout << (cntrLNHistoriaUsuario->alterarEstado(codigo, estado, papelUsuario)
                      ? "Estado alterado.\n" : "Historia nao encontrada.\n");
         } else if (opcao == 9) {
             Codigo historia, plano;
             if (!lerDominio("Codigo da historia: ", historia)) return;
             if (!lerDominio("Codigo do plano de sprint destino: ", plano)) return;
-            cout << (cntrLNHistoriaUsuario->moverParaSprint(historia, plano)
+            cout << (cntrLNHistoriaUsuario->moverParaSprint(historia, plano, papelUsuario)
                      ? "Historia movida para o plano de sprint.\n"
                      : "Falha: historia/plano inexistente ou capacidade excedida.\n");
         } else if (opcao == 10) {
             Codigo historia; Email pessoa;
             if (!lerDominio("Codigo da historia: ", historia)) return;
             if (!lerDominio("Email da pessoa: ", pessoa)) return;
-            cout << (cntrLNHistoriaUsuario->associarPessoa(historia, pessoa)
+            cout << (cntrLNHistoriaUsuario->associarPessoa(historia, pessoa, papelUsuario)
                      ? "Pessoa associada a historia.\n"
                      : "Falha: historia/pessoa inexistente ou ja associada.\n");
         } else if (opcao == 11) {
             Codigo historia; Email pessoa;
             if (!lerDominio("Codigo da historia: ", historia)) return;
             if (!lerDominio("Email da pessoa: ", pessoa)) return;
-            cout << (cntrLNHistoriaUsuario->desassociarPessoa(historia, pessoa)
+            cout << (cntrLNHistoriaUsuario->desassociarPessoa(historia, pessoa, papelUsuario)
                      ? "Associacao removida.\n" : "Associacao nao encontrada.\n");
         } else if (opcao == 12) {
             Email pessoa;
