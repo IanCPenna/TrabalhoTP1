@@ -62,6 +62,13 @@
 		<Unit filename="entidades/historia_usuario.cpp" />
 		<Unit filename="entidades/historia_usuario.hpp" />
 		<Unit filename="main.cpp" />
+		<Unit filename="interfaces.hpp" />
+		<Unit filename="containers.cpp" />
+		<Unit filename="containers.hpp" />
+		<Unit filename="controladoras_servico.cpp" />
+		<Unit filename="controladoras_servico.hpp" />
+		<Unit filename="controladoras_apresentacao.cpp" />
+		<Unit filename="controladoras_apresentacao.hpp" />
 		<Unit filename="testesUnitarios/TUCodigo.hpp" />
 		<Unit filename="testesUnitarios/TUData.hpp" />
 		<Unit filename="testesUnitarios/TUEmail.cpp" />
