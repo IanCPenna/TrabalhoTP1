@@ -51,35 +51,10 @@ static void executarTestes() {
 }
 
 /**
- * @brief Cadastra pessoas iniciais para viabilizar a autenticacao e os demais
- *        servicos (um mestre scrum e um proprietario de produto).
+ * @brief Le a opcao de um menu. Retorna -1 em caso de fim de entrada (EOF).
  */
-static void semearDados(CntrLNPessoa& lnPessoa) {
-    Pessoa mestre;
-    Email e1; e1.setValor("admin@scrum.com");
-    Nome n1; n1.setValor("Admin");
-    Senha s1; s1.setValor("a1B2c3");
-    Papel p1; p1.setValor("MESTRE SCRUM");
-    mestre.setEmail(e1); mestre.setNome(n1); mestre.setSenha(s1); mestre.setPapel(p1);
-    lnPessoa.criar(mestre);
-
-    Pessoa dono;
-    Email e2; e2.setValor("dono@scrum.com");
-    Nome n2; n2.setValor("Dono");
-    Senha s2; s2.setValor("a1B2c3");
-    Papel p2; p2.setValor("PROPRIETARIO DE PRODUTO");
-    dono.setEmail(e2); dono.setNome(n2); dono.setSenha(s2); dono.setPapel(p2);
-    lnPessoa.criar(dono);
-}
-
-/**
- * @brief Le a opcao do menu principal. Retorna -1 em caso de fim de entrada.
- */
-static int lerOpcaoPrincipal() {
-    cout << "\n=========== Menu Principal ===========\n"
-         << "1 - Pessoas\n2 - Projetos\n3 - Planos de Sprint\n"
-         << "4 - Historias de Usuario\n0 - Sair\n"
-         << "Opcao: ";
+static int lerOpcao(const string& menu) {
+    cout << menu << "Opcao: ";
     string linha;
     if (!getline(cin, linha))
         return -1;
@@ -113,46 +88,63 @@ int main() {
     iuPlano.setCntrLNPlanoSprint(&lnPlano);
     iuHistoria.setCntrLNHistoriaUsuario(&lnHistoria);
 
-    semearDados(lnPessoa);
-
     cout << "\n\n#############################################\n"
          << "#   Sistema de Gestao de Projetos (Scrum)   #\n"
-         << "#############################################\n"
-         << "(contas iniciais: admin@scrum.com e dono@scrum.com, senha a1B2c3)\n";
+         << "#############################################\n";
 
-    // 3. Autenticacao como porta de entrada.
-    Email usuarioLogado;
-    bool autenticado = false;
-    while (!autenticado) {
-        try {
-            autenticado = iuAutenticacao.autenticar(&usuarioLogado);
-            if (!autenticado)
-                cout << "Credenciais invalidas. Tente novamente.\n";
-        } catch (const runtime_error&) {
-            cout << "Erro de sistema na autenticacao.\n";
-            return 1;
-        }
-        if (!cin) { // fim de entrada durante a autenticacao
-            cout << "\nEncerrando.\n";
-            return 0;
-        }
-    }
-    cout << "\nAutenticado como: " << usuarioLogado.getValor() << "\n";
+    const string menuInicial =
+        "\n=========== Tela Inicial ===========\n"
+        "1 - Entrar\n2 - Criar conta\n0 - Sair\n";
+    const string menuPrincipal =
+        "\n=========== Menu Principal ===========\n"
+        "1 - Pessoas\n2 - Projetos\n3 - Planos de Sprint\n"
+        "4 - Historias de Usuario\n0 - Sair (logout)\n";
 
-    // 4. Menu principal: acesso aos servicos apos autenticado.
-    int opcao;
+    // 3. Tela inicial: o usuario pode criar conta (cadastro) ou entrar (login).
+    int opcaoInicial;
     do {
-        opcao = lerOpcaoPrincipal();
-        switch (opcao) {
-            case 1: iuPessoa.executar(usuarioLogado);   break;
-            case 2: iuProjeto.executar(usuarioLogado);  break;
-            case 3: iuPlano.executar(usuarioLogado);    break;
-            case 4: iuHistoria.executar(usuarioLogado); break;
-            case 0:
-            case -1: cout << "\nEncerrando o sistema.\n"; break;
-            default: cout << "Opcao invalida.\n"; break;
+        opcaoInicial = lerOpcao(menuInicial);
+
+        if (opcaoInicial == 1) {
+            // 3a. Autenticacao como porta de entrada para os servicos.
+            Email usuarioLogado;
+            bool autenticado = false;
+            try {
+                autenticado = iuAutenticacao.autenticar(&usuarioLogado);
+            } catch (const runtime_error&) {
+                cout << "Erro de sistema na autenticacao.\n";
+                continue;
+            }
+            if (!autenticado) {
+                cout << "Credenciais invalidas.\n";
+                continue;
+            }
+            cout << "\nAutenticado como: " << usuarioLogado.getValor() << "\n";
+
+            // 4. Menu principal: servicos disponiveis apos autenticado.
+            int opcao;
+            do {
+                opcao = lerOpcao(menuPrincipal);
+                switch (opcao) {
+                    case 1: iuPessoa.executar(usuarioLogado);   break;
+                    case 2: iuProjeto.executar(usuarioLogado);  break;
+                    case 3: iuPlano.executar(usuarioLogado);    break;
+                    case 4: iuHistoria.executar(usuarioLogado); break;
+                    case 0:
+                    case -1: cout << "\nLogout.\n"; break;
+                    default: cout << "Opcao invalida.\n"; break;
+                }
+            } while (opcao != 0 && opcao != -1);
+
+        } else if (opcaoInicial == 2) {
+            // 3b. Criacao de conta: qualquer email valido pode se cadastrar.
+            iuPessoa.cadastrar();
+        } else if (opcaoInicial == 0 || opcaoInicial == -1) {
+            cout << "\nEncerrando o sistema.\n";
+        } else {
+            cout << "Opcao invalida.\n";
         }
-    } while (opcao != 0 && opcao != -1);
+    } while (opcaoInicial != 0 && opcaoInicial != -1);
 
     return 0;
 }

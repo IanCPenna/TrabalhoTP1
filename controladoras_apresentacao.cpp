@@ -103,6 +103,20 @@ static void apresentarPessoa(const Pessoa& p) {
          << "  Papel: " << p.getPapel().getValor() << "\n";
 }
 
+void CntrIUPessoa::cadastrar() {
+    Pessoa pessoa;
+    Email email; Nome nome; Senha senha; Papel papel;
+    cout << "\n--- Criar conta ---\n";
+    if (!lerDominio("Email: ", email)) return;
+    if (!lerDominio("Nome: ", nome)) return;
+    if (!lerDominio("Senha: ", senha)) return;
+    if (!lerDominio("Papel (DESENVOLVEDOR / MESTRE SCRUM / PROPRIETARIO DE PRODUTO): ", papel)) return;
+    pessoa.setEmail(email); pessoa.setNome(nome);
+    pessoa.setSenha(senha); pessoa.setPapel(papel);
+    cout << (cntrLNPessoa->criar(pessoa) ? "Conta criada com sucesso. Faca login para entrar.\n"
+                                         : "Falha: ja existe pessoa com este email.\n");
+}
+
 void CntrIUPessoa::executar(const Email&) {
     int opcao;
     do {
@@ -111,16 +125,7 @@ void CntrIUPessoa::executar(const Email&) {
         opcao = lerOpcao("Opcao: ");
 
         if (opcao == 1) {
-            Pessoa pessoa;
-            Email email; Nome nome; Senha senha; Papel papel;
-            if (!lerDominio("Email: ", email)) return;
-            if (!lerDominio("Nome: ", nome)) return;
-            if (!lerDominio("Senha: ", senha)) return;
-            if (!lerDominio("Papel (DESENVOLVEDOR / MESTRE SCRUM / PROPRIETARIO DE PRODUTO): ", papel)) return;
-            pessoa.setEmail(email); pessoa.setNome(nome);
-            pessoa.setSenha(senha); pessoa.setPapel(papel);
-            cout << (cntrLNPessoa->criar(pessoa) ? "Pessoa criada com sucesso.\n"
-                                                 : "Falha: ja existe pessoa com este email.\n");
+            cadastrar();
         } else if (opcao == 2) {
             Pessoa pessoa; Email email;
             if (!lerDominio("Email da pessoa: ", email)) return;

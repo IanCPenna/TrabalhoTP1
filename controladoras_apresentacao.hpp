@@ -38,6 +38,7 @@ private:
 public:
     CntrIUPessoa() : cntrLNPessoa(0) {}
     void executar(const Email& usuarioLogado);
+    void cadastrar();
     void setCntrLNPessoa(ILNPessoa* cntr) { cntrLNPessoa = cntr; }
 };
 

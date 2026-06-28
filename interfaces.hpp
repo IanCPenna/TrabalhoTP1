@@ -93,6 +93,8 @@ class IUPessoa {
 public:
     /** @brief Exibe o menu de servicos da entidade Pessoa. */
     virtual void executar(const Email& usuarioLogado) = 0;
+    /** @brief Conduz a criacao de conta (cadastro) de um novo usuario, antes do login. */
+    virtual void cadastrar() = 0;
     virtual void setCntrLNPessoa(ILNPessoa* cntrLNPessoa) = 0;
     virtual ~IUPessoa() {}
 };

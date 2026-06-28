@@ -55,4 +55,5 @@
   g++ -std=c++11 -I. main.cpp dominios/*.cpp entidades/*.cpp testesUnitarios/*.cpp \
       containers.cpp controladoras_servico.cpp controladoras_apresentacao.cpp -o scrum
   ```
-- Contas iniciais (seed) para login: `admin@scrum.com` e `dono@scrum.com`, senha `a1B2c3`.
+- Na tela inicial, escolha **2 - Criar conta** para cadastrar um usuario (qualquer email
+  valido), depois **1 - Entrar** para autenticar e acessar os servicos.
