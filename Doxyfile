@@ -1,0 +1,54 @@
+# Arquivo de configuracao do Doxygen para o Trabalho Pratico 1.
+# Gera a documentacao HTML das classes a partir dos comentarios /** ... */.
+# Para gerar, na pasta do projeto execute:  doxygen Doxyfile
+# A documentacao sera criada em:            docs/html/index.html
+
+#---------------------------------------------------------------------------
+# Identificacao do projeto
+#---------------------------------------------------------------------------
+PROJECT_NAME           = "Trabalho TP1 - Sistema de Gestao de Projetos (Scrum)"
+PROJECT_BRIEF          = "Tecnicas de Programacao 1 - UnB"
+OUTPUT_DIRECTORY       = docs
+OUTPUT_LANGUAGE        = Brazilian
+CREATE_SUBDIRS         = NO
+
+#---------------------------------------------------------------------------
+# O que documentar
+#---------------------------------------------------------------------------
+# Documenta todas as classes encontradas, mesmo sem comentario...
+EXTRACT_ALL            = YES
+# ...mas, na perspectiva dos usuarios das classes, oculta os membros privados.
+EXTRACT_PRIVATE        = NO
+EXTRACT_STATIC         = YES
+HIDE_UNDOC_MEMBERS     = NO
+JAVADOC_AUTOBRIEF      = YES
+OPTIMIZE_OUTPUT_FOR_C  = NO
+
+#---------------------------------------------------------------------------
+# Arquivos de entrada
+#---------------------------------------------------------------------------
+INPUT                  = .
+RECURSIVE              = YES
+FILE_PATTERNS          = *.hpp *.cpp
+INPUT_ENCODING         = UTF-8
+# Ignora pastas que nao fazem parte do codigo-fonte documentavel.
+EXCLUDE                = docs .git bin obj
+
+#---------------------------------------------------------------------------
+# Formato de saida
+#---------------------------------------------------------------------------
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+GENERATE_LATEX         = NO
+GENERATE_TREEVIEW      = YES
+
+#---------------------------------------------------------------------------
+# Diagramas (sem dependencia externa do Graphviz)
+#---------------------------------------------------------------------------
+HAVE_DOT               = NO
+
+#---------------------------------------------------------------------------
+# Mensagens
+#---------------------------------------------------------------------------
+QUIET                  = NO
+WARNINGS               = YES
